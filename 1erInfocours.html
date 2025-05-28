@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice HTML/CSS Facile avec Corrections</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .section { background: #f8f9fa; padding: 20px; margin: 15px 0; border-radius: 5px; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #e74c3c; }
+        .code { background: #2c3e50; color: white; padding: 15px; border-radius: 5px; }
+        .explanation { background: #e8f4f8; padding: 10px; margin: 10px 0; border-left: 3px solid #3498db; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Exercice HTML/CSS Facile</h1>
+    
+    <div class="section">
+        <h2>Consignes :</h2>
+        <p>Créez une page personnelle avec :</p>
+        <ol>
+            <li>Un en-tête avec votre prénom</li>
+            <li>Une section contenant vos loisirs</li>
+            <li>Un pied de page avec le copyright</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Correction HTML :</h2>
+        <div class="code">
+&lt;!DOCTYPE html&gt;                           &lt;!-- 1. Déclaration du type de document --&gt;
+&lt;html lang="fr"&gt;                        &lt;!-- 2. Balise racine avec langue --&gt;
+&lt;head&gt;                                    &lt;!-- 3. En-tête invisible --&gt;
+    &lt;meta charset="UTF-8"&gt;               &lt;!-- 4. Encodage des caractères --&gt;
+    &lt;title&gt;Ma Page&lt;/title&gt;               &lt;!-- 5. Titre de l'onglet --&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt; &lt;!-- 6. Lien vers le CSS --&gt;
+&lt;/head&gt;
+&lt;body&gt;                                    &lt;!-- 7. Début du contenu visible --&gt;
+    &lt;header&gt;                               &lt;!-- 8. En-tête visible --&gt;
+        &lt;h1&gt;Sophie&lt;/h1&gt;                   &lt;!-- 9. Titre principal --&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;                                 &lt;!-- 10. Contenu principal --&gt;
+        &lt;section&gt;                          &lt;!-- 11. Section thématique --&gt;
+            &lt;h2&gt;Mes Loisirs&lt;/h2&gt;           &lt;!-- 12. Sous-titre --&gt;
+            &lt;ul&gt;                           &lt;!-- 13. Liste non ordonnée --&gt;
+                &lt;li&gt;Dessin&lt;/li&gt;            &lt;!-- 14. Élément de liste --&gt;
+                &lt;li&gt;Musique&lt;/li&gt;
+                &lt;li&gt;Sport&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;                               &lt;!-- 15. Pied de page --&gt;
+        &lt;p&gt;&copy; 2023 - Sophie&lt;/p&gt;      &lt;!-- 16. Copyright --&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Correction CSS :</h2>
+        <div class="code">
+/* 1. Style du corps de la page */
+body {
+    background-color: #f0f8ff;    /* Fond bleu très clair */
+    font-family: Arial;          /* Police simple */
+    margin: 0;                   /* Supprime les marges par défaut */
+    padding: 20px;               /* Espace autour du contenu */
+}
+
+/* 2. Style de l'en-tête */
+header {
+    text-align: center;          /* Centrage du texte */
+    padding: 20px;               /* Espacement interne */
+}
+
+/* 3. Style du titre principal */
+h1 {
+    color: #0066cc;             /* Couleur bleue */
+    font-size: 2em;             /* Taille du texte */
+}
+
+/* 4. Style de la section */
+section {
+    background-color: white;    /* Fond blanc */
+    padding: 15px;              /* Espacement interne */
+    border-radius: 8px;         /* Coins arrondis */
+    margin: 15px 0;             /* Marge externe */
+}
+
+/* 5. Style de la liste */
+ul {
+    font-family: cursive;       /* Police cursive */
+    color: #333;               /* Couleur de texte */
+}
+
+/* 6. Style du pied de page */
+footer {
+    text-align: center;         /* Centrage du texte */
+    background-color: #eee;     /* Fond gris clair */
+    padding: 10px;              /* Espacement interne */
+    font-size: 0.9em;           /* Taille de texte réduite */
+}
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Explications :</h2>
+        
+        <div class="explanation">
+            <h3>Structure HTML :</h3>
+            <p><strong>Balises sémantiques</strong> : header, main, section, footer aident à structurer la page.</p>
+            <p><strong>Hiérarchie</strong> : h1 pour le titre principal, h2 pour les sous-titres.</p>
+            <p><strong>Liste</strong> : ul/li pour créer une liste à puces non ordonnée.</p>
+        </div>
+        
+        <div class="explanation">
+            <h3>Style CSS :</h3>
+            <p><strong>Sélecteurs</strong> : On cible les balises (body, header, h1...).</p>
+            <p><strong>Couleurs</strong> : On utilise des codes hexadécimaux (#0066cc).</p>
+            <p><strong>Espacement</strong> : padding pour l'intérieur, margin pour l'extérieur.</p>
+            <p><strong>Alignement</strong> : text-align: center pour centrer.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
