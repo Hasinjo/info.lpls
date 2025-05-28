@@ -2,130 +2,232 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Exercice HTML/CSS Facile avec Corrections</title>
+    <title>Exercice HTML/CSS - Correction Détaillée</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .section { background: #f8f9fa; padding: 20px; margin: 15px 0; border-radius: 5px; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        h2 { color: #e74c3c; }
-        .code { background: #2c3e50; color: white; padding: 15px; border-radius: 5px; }
-        .explanation { background: #e8f4f8; padding: 10px; margin: 10px 0; border-left: 3px solid #3498db; }
+        :root {
+            --primary: #3498db;
+            --secondary: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: var(--dark);
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        
+        .correction-section {
+            margin: 25px 0;
+        }
+        
+        .code-block {
+            background: #f8f8f8;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .explanation {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .explanation h3 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+        
+        .number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+            line-height: 24px;
+        }
+        
+        .note {
+            background: #fff8e1;
+            padding: 10px 15px;
+            border-left: 3px solid #ffc107;
+            margin: 15px 0;
+        }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>Exercice HTML/CSS Facile</h1>
-    
-    <div class="section">
-        <h2>Consignes :</h2>
-        <p>Créez une page personnelle avec :</p>
-        <ol>
-            <li>Un en-tête avec votre prénom</li>
-            <li>Une section contenant vos loisirs</li>
-            <li>Un pied de page avec le copyright</li>
-        </ol>
-    </div>
-
-    <div class="section">
-        <h2>Correction HTML :</h2>
-        <div class="code">
-&lt;!DOCTYPE html&gt;                           &lt;!-- 1. Déclaration du type de document --&gt;
-&lt;html lang="fr"&gt;                        &lt;!-- 2. Balise racine avec langue --&gt;
-&lt;head&gt;                                    &lt;!-- 3. En-tête invisible --&gt;
-    &lt;meta charset="UTF-8"&gt;               &lt;!-- 4. Encodage des caractères --&gt;
-    &lt;title&gt;Ma Page&lt;/title&gt;               &lt;!-- 5. Titre de l'onglet --&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt; &lt;!-- 6. Lien vers le CSS --&gt;
+    <div class="container">
+        <h1>Exercice HTML/CSS pour Débutants</h1>
+        
+        <div class="card">
+            <h2>Consignes de l'exercice</h2>
+            <p>Créez une page web personnelle contenant :</p>
+            <ol>
+                <li>Un en-tête avec votre prénom</li>
+                <li>Une section avec vos centres d'intérêt</li>
+                <li>Un pied de page avec mention de copyright</li>
+            </ol>
+            <p>Avec ces styles CSS :</p>
+            <ul>
+                <li>Fond de page bleu clair</li>
+                <li>Titre principal centré et bleu foncé</li>
+                <li>Section avec fond blanc et ombre portée</li>
+                <li>Liste en police cursive</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Correction Complète</h2>
+            
+            <div class="correction-section">
+                <h3>Structure HTML</h3>
+                <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Ma Page Personnelle&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
 &lt;/head&gt;
-&lt;body&gt;                                    &lt;!-- 7. Début du contenu visible --&gt;
-    &lt;header&gt;                               &lt;!-- 8. En-tête visible --&gt;
-        &lt;h1&gt;Sophie&lt;/h1&gt;                   &lt;!-- 9. Titre principal --&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Mon Prénom&lt;/h1&gt;
     &lt;/header&gt;
     
-    &lt;main&gt;                                 &lt;!-- 10. Contenu principal --&gt;
-        &lt;section&gt;                          &lt;!-- 11. Section thématique --&gt;
-            &lt;h2&gt;Mes Loisirs&lt;/h2&gt;           &lt;!-- 12. Sous-titre --&gt;
-            &lt;ul&gt;                           &lt;!-- 13. Liste non ordonnée --&gt;
-                &lt;li&gt;Dessin&lt;/li&gt;            &lt;!-- 14. Élément de liste --&gt;
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Mes Centres d'Intérêt&lt;/h2&gt;
+            &lt;ul&gt;
                 &lt;li&gt;Musique&lt;/li&gt;
                 &lt;li&gt;Sport&lt;/li&gt;
+                &lt;li&gt;Voyages&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/section&gt;
     &lt;/main&gt;
     
-    &lt;footer&gt;                               &lt;!-- 15. Pied de page --&gt;
-        &lt;p&gt;&copy; 2023 - Sophie&lt;/p&gt;      &lt;!-- 16. Copyright --&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2023 - Mon Prénom&lt;/p&gt;
     &lt;/footer&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Correction CSS :</h2>
-        <div class="code">
-/* 1. Style du corps de la page */
+                </div>
+                
+                <div class="explanation">
+                    <h3>Explications HTML</h3>
+                    <p><span class="number">1</span> <strong>DOCTYPE</strong> : Définit le type de document HTML5</p>
+                    <p><span class="number">2</span> <strong>Balises sémantiques</strong> : header, main, section, footer structurent la page</p>
+                    <p><span class="number">3</span> <strong>Hiérarchie</strong> : h1 pour le titre principal, h2 pour le sous-titre</p>
+                    <p><span class="number">4</span> <strong>Liste</strong> : ul/li crée une liste à puces non ordonnée</p>
+                </div>
+            </div>
+            
+            <div class="correction-section">
+                <h3>Feuille de Style CSS</h3>
+                <div class="code-block">
+/* Style général de la page */
 body {
     background-color: #f0f8ff;    /* Fond bleu très clair */
-    font-family: Arial;          /* Police simple */
-    margin: 0;                   /* Supprime les marges par défaut */
-    padding: 20px;               /* Espace autour du contenu */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
 }
 
-/* 2. Style de l'en-tête */
+/* En-tête de page */
 header {
-    text-align: center;          /* Centrage du texte */
-    padding: 20px;               /* Espacement interne */
+    text-align: center;          /* Texte centré */
+    padding: 30px 0;             /* Espacement */
 }
 
-/* 3. Style du titre principal */
+/* Titre principal */
 h1 {
-    color: #0066cc;             /* Couleur bleue */
-    font-size: 2em;             /* Taille du texte */
+    color: #0066cc;              /* Couleur bleue */
+    font-size: 2.2em;            /* Taille du texte */
+    margin-bottom: 0;            /* Supprime la marge */
 }
 
-/* 4. Style de la section */
+/* Section principale */
 section {
-    background-color: white;    /* Fond blanc */
-    padding: 15px;              /* Espacement interne */
-    border-radius: 8px;         /* Coins arrondis */
-    margin: 15px 0;             /* Marge externe */
+    background-color: white;     /* Fond blanc */
+    padding: 20px;               /* Espacement interne */
+    border-radius: 8px;          /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère */
+    max-width: 600px;            /* Largeur maximale */
+    margin: 20px auto;           /* Centrage */
 }
 
-/* 5. Style de la liste */
+/* Style de la liste */
 ul {
-    font-family: cursive;       /* Police cursive */
-    color: #333;               /* Couleur de texte */
+    font-family: cursive;        /* Police cursive */
+    color: #333;                 /* Couleur de texte */
+    line-height: 1.8;            /* Hauteur de ligne */
+    padding-left: 20px;          /* Alignement des puces */
 }
 
-/* 6. Style du pied de page */
+/* Pied de page */
 footer {
-    text-align: center;         /* Centrage du texte */
-    background-color: #eee;     /* Fond gris clair */
-    padding: 10px;              /* Espacement interne */
-    font-size: 0.9em;           /* Taille de texte réduite */
+    text-align: center;          /* Centrage du texte */
+    background-color: #e0e0e0;   /* Fond gris clair */
+    padding: 15px;               /* Espacement */
+    font-size: 0.9em;            /* Taille réduite */
+    margin-top: 30px;            /* Espace au-dessus */
 }
+                </div>
+                
+                <div class="explanation">
+                    <h3>Explications CSS</h3>
+                    <p><span class="number">1</span> <strong>Sélecteurs</strong> : On cible les éléments HTML à styliser</p>
+                    <p><span class="number">2</span> <strong>Couleurs</strong> : Utilisation de codes hexadécimaux (#0066cc)</p>
+                    <p><span class="number">3</span> <strong>Espacement</strong> : padding pour l'intérieur, margin pour l'extérieur</p>
+                    <p><span class="number">4</span> <strong>Typographie</strong> : font-family pour changer la police</p>
+                    
+                    <div class="note">
+                        <strong>Astuce :</strong> Les commentaires CSS (/* ... */) aident à organiser son code.
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="section">
-        <h2>Explications :</h2>
-        
-        <div class="explanation">
-            <h3>Structure HTML :</h3>
-            <p><strong>Balises sémantiques</strong> : header, main, section, footer aident à structurer la page.</p>
-            <p><strong>Hiérarchie</strong> : h1 pour le titre principal, h2 pour les sous-titres.</p>
-            <p><strong>Liste</strong> : ul/li pour créer une liste à puces non ordonnée.</p>
-        </div>
-        
-        <div class="explanation">
-            <h3>Style CSS :</h3>
-            <p><strong>Sélecteurs</strong> : On cible les balises (body, header, h1...).</p>
-            <p><strong>Couleurs</strong> : On utilise des codes hexadécimaux (#0066cc).</p>
-            <p><strong>Espacement</strong> : padding pour l'intérieur, margin pour l'extérieur.</p>
-            <p><strong>Alignement</strong> : text-align: center pour centrer.</p>
-        </div>
-    </div>
-</div>
 </body>
 </html>
