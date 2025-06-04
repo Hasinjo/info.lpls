@@ -1,110 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3 ème exercice</title>
+    <title>Travaux Pratiques Informatique 3ème</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 35px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        .section-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .practice-box {
+            background-color: #fff3e0;
+            border-left: 4px solid #ffa000;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .practice-box h3 {
+            color: #e65100;
+            margin-top: 0;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+    </style>
 </head>
 <body>
-    <div class="scratch-container">
-  <!-- Exercice 1 : Multiplier deux nombres -->
-  <div class="scratch-exercise">
-    <h3>Exercice Scratch : Multiplier deux nombres</h3>
-    
-    <p><strong>Objectif</strong> : Créer un programme qui multiplie deux nombres.</p>
-    
-    <h4>Instructions :</h4>
-    <ol>
-      <li>Ouvre Scratch (<a href="https://scratch.mit.edu" target="_blank">scratch.mit.edu</a>)</li>
-      <li>Ajoute ces blocs :</li>
-    </ol>
+<div class="container">
+    <h1>Travaux Pratiques – Informatique 3ème</h1>
 
-    <div class="scratch-blocks">
-      <p>1. Quand drapeau vert cliqué</p>
-      <p>2. Demander "Premier nombre?" et attendre</p>
-      <p>3. Mettre [nombre1] à (réponse)</p>
-      <p>4. Demander "Deuxième nombre?" et attendre</p>
-      <p>5. Mettre [nombre2] à (réponse)</p>
-      <p>6. Dire "Résultat: " + (nombre1 * nombre2)</p>
+    <div class="section-card">
+        <h2>Programmation avancée avec Scratch</h2>
+        
+        <div class="practice-box">
+            <h3>TP 1 : Coordonnées et déplacements</h3>
+            <ul>
+                <li>Créez un programme où un sprite se déplace pour dessiner un carré en utilisant les coordonnées suivantes : (0,0), (100,0), (100,100), (0,100).</li>
+                <li>Modifiez le programme pour dessiner un rectangle de dimensions différentes.</li>
+            </ul>
+        </div>
+
+        <div class="practice-box">
+            <h3>TP 2 : Boucles et figures géométriques</h3>
+            <ul>
+                <li>Écrivez un script Scratch qui utilise une boucle pour dessiner un hexagone régulier.</li>
+                <li>Adaptez votre script pour dessiner une étoile à 5 branches.</li>
+                <li>Bonus : Créez une spirale carrée en utilisant une boucle et une variable pour la longueur des côtés.</li>
+            </ul>
+        </div>
+
+        <div class="practice-box">
+            <h3>TP 3 : Variables et interactions</h3>
+            <ul>
+                <li>Créez un programme où une variable affiche en temps réel la distance parcourue par un sprite.</li>
+                <li>Ajoutez une interaction clavier : le sprite avance ou recule selon la touche pressée, et la variable distance s’actualise.</li>
+            </ul>
+        </div>
+
+        <div class="practice-box">
+            <h3>TP 4 : Sons et conditions</h3>
+            <ul>
+                <li>Réalisez un script où un sprite joue un son différent selon sa position sur l’axe x.</li>
+                <li>Ajoutez une condition : si le sprite atteint un bord de l’écran, il change de direction et joue un son d’alerte.</li>
+            </ul>
+        </div>
     </div>
 
+    <div class="section-card">
+        <h2>Algorithmique et organigrammes</h2>
+        
+        <div class="practice-box">
+            <h3>TP 5 : Moyenne de trois nombres</h3>
+            <ul>
+                <li>Écrivez un algorithme qui demande à l’utilisateur de saisir trois nombres, puis calcule et affiche leur moyenne.</li>
+                <li>Réalisez l’organigramme correspondant à cet algorithme.</li>
+            </ul>
+        </div>
 
-    <h4>Exemple :</h4>
-    <p>Si tu entres 3 et 4, le programme dira "Résultat: 12"</p>
-  </div>
+        <div class="practice-box">
+            <h3>TP 6 : Aire d’un rectangle</h3>
+            <ul>
+                <li>Écrivez un algorithme qui demande la longueur et la largeur d’un rectangle, puis calcule et affiche son aire.</li>
+                <li>Implémentez cet algorithme dans Scratch ou en pseudo-code.</li>
+            </ul>
+        </div>
 
-  <!-- Exercice 2 : Calculer la moyenne de trois nombres -->
-  <div class="scratch-exercise">
-    <h3>Exercice Scratch : Calculer la moyenne de trois nombres</h3>
-    
-    <p><strong>Objectif</strong> : Créer un programme qui calcule la moyenne de trois nombres.</p>
-    
-    <h4>Instructions :</h4>
-    <ol>
-      <li>Ouvre Scratch (<a href="https://scratch.mit.edu" target="_blank">scratch.mit.edu</a>)</li>
-      <li>Ajoute ces blocs :</li>
-    </ol>
-
-    <div class="scratch-blocks">
-      <p>1. Quand drapeau vert cliqué</p>
-      <p>2. Demander "Premier nombre?" et attendre</p>
-      <p>3. Mettre [nombre1] à (réponse)</p>
-      <p>4. Demander "Deuxième nombre?" et attendre</p>
-      <p>5. Mettre [nombre2] à (réponse)</p>
-      <p>6. Demander "Troisième nombre?" et attendre</p>
-      <p>7. Mettre [nombre3] à (réponse)</p>
-      <p>8. Mettre [moyenne] à ((nombre1 + nombre2 + nombre3) / 3)</p>
-      <p>9. Dire "Moyenne: " + (moyenne)</p>
+        <div class="practice-box">
+            <h3>TP 7 : Nombre positif, négatif ou nul</h3>
+            <ul>
+                <li>Écrivez un algorithme qui demande un nombre à l’utilisateur et affiche s’il est positif, négatif ou nul.</li>
+                <li>Dessinez l’organigramme de cet algorithme.</li>
+            </ul>
+        </div>
     </div>
 
-    <h4>Exemple :</h4>
-    <p>Si tu entres 10, 20 et 30, le programme dira "Moyenne: 20"</p>
+    <div class="section-card">
+        <h2>Applications Scratch et IA</h2>
 
-    <h4>Astuce :</h4>
-    <p>Pour arrondir le résultat, utilise le bloc "arrondir" dans la catégorie Opérateurs.</p>
-  </div>
+        <div class="practice-box">
+            <h3>TP 8 : Calcul du volume d’une sphère</h3>
+            <ul>
+                <li>Créez un programme Scratch qui demande le rayon d’une sphère, puis calcule et affiche le volume à l’aide de la formule <code>V = (4/3) × π × r³</code>.</li>
+            </ul>
+        </div>
 
-  <style>
-    .scratch-container {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    .scratch-exercise {
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 25px;
-    }
-    
-    .scratch-blocks {
-      background-color: #fff;
-      border-left: 4px solid #4d97ff;
-      padding: 10px;
-      margin: 10px 0;
-      font-family: monospace;
-    }
-    
-    h3 {
-      color: #4d97ff;
-      margin-top: 0;
-    }
-    
-    h4 {
-      margin-bottom: 10px;
-    }
-    
-    .scratch-exercise p {
-      margin: 8px 0;
-    }
-    
-    .scratch-exercise ol {
-      padding-left: 20px;
-    }
-  </style>
+        <div class="practice-box">
+            <h3>TP 9 : Prompts efficaces pour l’IA</h3>
+            <ul>
+                <li>Rédigez trois prompts efficaces pour demander à une IA de résoudre des problèmes mathématiques.</li>
+                <li>Testez vos prompts sur un assistant IA (si disponible) et analysez les réponses obtenues.</li>
+            </ul>
+        </div>
+
+        <div class="practice-box">
+            <h3>TP 10 : Mini-projet IA – Chatbot simple</h3>
+            <ul>
+                <li>En groupe, concevez un mini-chatbot dans Scratch ou en pseudo-code qui répond à des questions simples sur les mathématiques ou l’informatique.</li>
+                <li>Présentez le fonctionnement de votre chatbot à la classe.</li>
+            </ul>
+        </div>
+    </div>
 </div>
 </body>
 </html>
