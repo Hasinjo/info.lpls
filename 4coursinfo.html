@@ -3,473 +3,550 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cours d'informatique - 4ème</title>
+    <title>Résumé Informatique 3ème</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f7fa;
+            line-height: 1.6;
             color: #333;
-        }
-        .container {
-            max-width: 950px;
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            padding: 35px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        h1, h2, h3, h4 {
-            color: #2c3e50;
-            font-weight: 600;
+            padding: 20px;
+            background-color: #f9f9f9;
         }
         h1 {
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 12px;
+            color: #2c3e50;
             text-align: center;
-            font-size: 2.2em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
             margin-bottom: 30px;
         }
         h2 {
-            border-left: 5px solid #3498db;
-            padding-left: 15px;
-            margin-top: 45px;
-            background: #f8fafc;
-            padding: 12px;
-            border-radius: 0 6px 6px 0;
-            font-size: 1.8em;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        h3 {
             color: #2980b9;
-            margin-top: 30px;
-            border-bottom: 2px dashed #e0e6ed;
-            padding-bottom: 8px;
-            font-size: 1.5em;
+            margin-top: 35px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
         }
-        h4 {
-            margin-top: 25px;
-            color: #16a085;
-            font-size: 1.3em;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-        .header p {
-            color: #7f8c8d;
-            font-size: 1.1em;
-        }
-        .toc {
-            background: #f1f9fe;
-            padding: 25px;
+        .intro-box {
+            background-color: #e3f2fd;
+            padding: 15px;
             border-radius: 8px;
-            margin-bottom: 35px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            border-left: 5px solid #3498db;
         }
-        .toc h2 {
+        .section-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .definition-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #5dade2;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .example-box {
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .practice-box {
+            background-color: #fff3e0;
+            border-left: 4px solid #ffa000;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .practice-box h3 {
+            color: #e65100;
             margin-top: 0;
-            border-left: none;
-            background: transparent;
+        }
+        nav ul {
+            list-style: none;
             padding-left: 0;
-            text-align: center;
         }
-        .toc ul {
-            list-style-type: none;
-            padding-left: 25px;
-            column-count: 2;
-            column-gap: 30px;
+        nav ul li {
+            margin-bottom: 5px;
         }
-        .toc li {
-            margin-bottom: 10px;
-            break-inside: avoid;
-        }
-        .toc a {
-            text-decoration: none;
+        nav ul li a {
             color: #2980b9;
-            font-weight: 500;
+            text-decoration: none;
             transition: color 0.2s;
-            display: block;
-            padding: 5px 0;
         }
-        .toc a:hover {
-            color: #1a5276;
+        nav ul li a:hover {
+            color: #e67e22;
             text-decoration: underline;
         }
-        .toc ul ul {
+        nav ul ul {
+            margin-left: 25px;
             margin-top: 5px;
-            padding-left: 20px;
-            column-count: 1;
-        }
-        .definition {
-            background: #e8f4fc;
-            padding: 18px;
-            border-left: 4px solid #3498db;
-            margin: 25px 0;
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .example {
-            background: #e8f8f0;
-            padding: 18px;
-            border-left: 4px solid #2ecc71;
-            margin: 25px 0;
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .exercise {
-            background: #fef9e7;
-            padding: 18px;
-            border-left: 4px solid #f39c12;
-            margin: 25px 0;
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .note {
-            background: #fff8e1;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .warning {
-            background: #ffebee;
-            padding: 15px;
-            border-left: 4px solid #f44336;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        code {
-            background: #f0f3f7;
-            padding: 3px 6px;
-            border-radius: 4px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.95em;
-            color: #c7254e;
-        }
-        pre {
-            background: #f5f7fa;
-            padding: 18px;
-            border-radius: 8px;
-            overflow-x: auto;
-            line-height: 1.5;
-            border-left: 4px solid #9b59b6;
-            font-family: 'Courier New', Courier, monospace;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
-            margin: 20px 0;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 25px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-radius: 8px;
-            overflow: hidden;
+            margin: 20px 0;
         }
         table, th, td {
-            border: 1px solid #e0e6ed;
+            border: 1px solid #ddd;
         }
         th, td {
-            padding: 14px 18px;
+            padding: 12px;
             text-align: left;
         }
         th {
             background-color: #3498db;
             color: white;
-            font-weight: 600;
         }
         tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-        tr:hover {
-            background-color: #f1f5f9;
-        }
-        .page-break {
-            height: 2px;
-            background: linear-gradient(to right, transparent, #3498db, transparent);
-            margin: 45px 0;
-            border: none;
-        }
-        .step {
-            margin-left: 20px;
-            padding-left: 15px;
-            border-left: 2px dotted #bdc3c7;
-            margin-bottom: 15px;
-        }
-        .step-title {
-            font-weight: bold;
-            color: #3498db;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .icon {
-            margin-right: 8px;
-            color: #3498db;
-        }
-        @media (max-width: 768px) {
-            .toc ul {
-                column-count: 1;
-            }
-            .container {
-                padding: 20px;
-            }
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Cours d'informatique - Classe de 4ème</h1>
-            <p><strong>David SALAMANRIVO HASINJO</strong> - 28 avril 2025</p>
-        </div>
 
-        <div class="toc">
-            <h2>Table des matières</h2>
+<nav class="section-card" style="margin-bottom:40px;">
+    <h2 style="margin-top:0;">Table des matières</h2>
+    <ul>
+        <li><a href="#ch1">1. Programmation avancée avec Scratch</a>
             <ul>
-                <li><a href="#chapitre1">1. Introduction générale</a></li>
-                <li><a href="#chapitre2">2. Le traitement de texte</a>
-                    <ul>
-                        <li><a href="#section2.1">2.1 Définition</a></li>
-                        <li><a href="#section2.2">2.2 Historique</a></li>
-                        <li><a href="#section2.3">2.3 Motivation</a></li>
-                        <li><a href="#section2.4">2.4 Utilisation dans la vie quotidienne</a></li>
-                        <li><a href="#section2.5">2.5 Les fonctionnalités de base</a></li>
-                        <li><a href="#section2.6">2.6 Exercices pratiques</a></li>
-                        <li><a href="#section2.7">2.7 Mini-projet : Magazine scolaire</a></li>
-                    </ul>
-                </li>
-                <li><a href="#chapitre3">3. Introduction à l'algorithme</a>
-                    <ul>
-                        <li><a href="#section3.1">3.1 Définition</a></li>
-                        <li><a href="#section3.2">3.2 Historique</a></li>
-                        <li><a href="#section3.3">3.3 Motivation</a></li>
-                        <li><a href="#section3.4">3.4 Utilisation dans la vie quotidienne</a></li>
-                        <li><a href="#section3.5">3.5 Les parties d'un algorithme</a></li>
-                        <li><a href="#section3.6">3.6 Les variables</a></li>
-                        <li><a href="#section3.7">3.7 Exécution avec SCRATCH</a></li>
-                        <li><a href="#section3.8">3.8 Exercices pratiques</a></li>
-                        <li><a href="#section3.9">3.9 Mini-projet : Jeu SCRATCH</a></li>
-                    </ul>
-                </li>
-                <li><a href="#chapitre4">4. Introduction aux tableurs</a>
-                    <ul>
-                        <li><a href="#section4.1">4.1 Définition</a></li>
-                        <li><a href="#section4.2">4.2 Historique</a></li>
-                        <li><a href="#section4.3">4.3 Motivation</a></li>
-                        <li><a href="#section4.4">4.4 Utilisation dans la vie quotidienne</a></li>
-                        <li><a href="#section4.5">4.5 Parties de l'interface</a></li>
-                        <li><a href="#section4.6">4.6 Opérations de base</a></li>
-                        <li><a href="#section4.7">4.7 Exercices pratiques</a></li>
-                        <li><a href="#section4.8">4.8 Mini-projet : Suivi des notes</a></li>
-                    </ul>
-                </li>
-                <li><a href="#chapitre5">5. Initiation à l'Internet et création de diaporamas</a>
-                    <ul>
-                        <li><a href="#section5.1">5.1 Définition de l'Internet</a></li>
-                        <li><a href="#section5.2">5.2 Historique</a></li>
-                        <li><a href="#section5.3">5.3 Motivation</a></li>
-                        <li><a href="#section5.4">5.4 Utilisation quotidienne</a></li>
-                        <li><a href="#section5.5">5.5 Bases de la navigation</a></li>
-                        <li><a href="#section5.6">5.6 Création de diaporamas</a></li>
-                        <li><a href="#section5.7">5.7 Exercices pratiques</a></li>
-                        <li><a href="#section5.8">5.8 Mini-projet : Présentation d'un pays</a></li>
-                    </ul>
-                </li>
+                <li><a href="#ch1-1">1.1 Notions de coordonnées</a></li>
+                <li><a href="#ch1-2">1.2 Création des instructions</a></li>
+                <li><a href="#ch1-3">1.3 Les boucles</a></li>
+                <li><a href="#ch1-4">1.4 Les mouvements</a></li>
+                <li><a href="#ch1-5">1.5 Le stylo et les dessins</a></li>
+                <li><a href="#ch1-6">1.6 Le clavier</a></li>
+                <li><a href="#ch1-7">1.7 Le son et effets sonores</a></li>
+                <li><a href="#ch1-8">1.8 Les variables</a></li>
+                <li><a href="#ch1-9">1.9 Si ... alors ... sinon</a></li>
+                <li><a href="#ch1-10">1.10 Opérations algébriques</a></li>
+                <li><a href="#ch1-11">1.11 Blocs</a></li>
+            </ul>
+        </li>
+        <li><a href="#ch2">2. Introduction à l’algorithme</a>
+            <ul>
+                <li><a href="#ch2-1">2.1 Structure générale d’un algorithme</a></li>
+                <li><a href="#ch2-2">2.2 Variables et constantes</a></li>
+                <li><a href="#ch2-3">2.3 Instructions</a></li>
+                <li><a href="#ch2-4">2.4 Opérateurs</a></li>
+                <li><a href="#ch2-5">2.5 Organigramme</a></li>
+                <li><a href="#ch2-6">2.6 Application avec Scratch et approche mathématique</a></li>
+            </ul>
+        </li>
+        <li><a href="#ch3">3. Introduction à l’intelligence artificielle</a>
+            <ul>
+                <li><a href="#ch3-1">3.1 Définition de l’intelligence artificielle</a></li>
+                <li><a href="#ch3-2">3.2 Éthique de l’intelligence artificielle</a></li>
+                <li><a href="#ch3-3">3.3 Prompt efficace</a></li>
+                <li><a href="#ch3-4">3.4 Mini-projets</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h1>Résumé Informatique 3ème<br><span style="font-size:0.7em;font-weight:normal;">David SALAMANRIVO HASINJO – 23 avril 2025</span></h1>
+
+    <!-- CHAPITRE 1 -->
+    <h1 id="ch1">1. Programmation avancée avec Scratch</h1>
+    <div class="intro-box">
+        <p>
+            Ce chapitre approfondit les concepts de programmation avec Scratch : coordonnées, boucles, variables, structures conditionnelles, dessins, sons, clavier, et blocs personnalisés. Ces notions sont indispensables pour créer des programmes interactifs et résoudre des problèmes mathématiques ou ludiques.
+        </p>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-1">1.1 Notions de coordonnées</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les coordonnées sont des paires de nombres (x, y) qui définissent la position d’un point dans un plan cartésien. En Scratch, l’axe x est horizontal, l’axe y est vertical.
+            </p>
+        </div>
+        <div class="example-box">
+            <p><strong>Exemple :</strong> La position (100, 50) place le sprite à 100 sur l’axe x et 50 sur l’axe y.</p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme où un sprite dessine un carré en allant aux coordonnées (0,0), (100,0), (100,100), (0,100).</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-2">1.2 Création des instructions</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les instructions sont des commandes qui contrôlent les actions des sprites. Elles se combinent pour former des séquences logiques.
+            </p>
+        </div>
+        <table>
+            <tr>
+                <th>Bloc</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td><code>avancer de 10 pas</code></td>
+                <td>Déplace le sprite de 10 pas.</td>
+            </tr>
+            <tr>
+                <td><code>tourner de 90 degrés</code></td>
+                <td>Fait pivoter le sprite de 90°.</td>
+            </tr>
+            <tr>
+                <td><code>aller à x:100 y:50</code></td>
+                <td>Déplace le sprite à la position (100,50).</td>
+            </tr>
+        </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme où un sprite suit un triangle équilatéral avec des instructions de mouvement et de rotation.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-3">1.3 Les boucles</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Une boucle permet de répéter une série d’instructions plusieurs fois. En Scratch, on utilise le bloc <code>répéter</code>.
+            </p>
+        </div>
+        <div class="example-box">
+            <pre>
+répéter (24) fois
+    avancer de 10 pas
+    tourner de 15 degrés
+fin
+            </pre>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <ul>
+                <li>Dessiner un hexagone régulier avec une boucle</li>
+                <li>Dessiner une étoile à 5 branches</li>
+                <li>Dessiner une spirale carrée</li>
             </ul>
         </div>
-
-        <div class="page-break"></div>
-
-        <h2 id="chapitre1">Chapitre 1 : Introduction générale</h2>
-
-        <p>Ce cours d'informatique pour la classe de 4ème collège a pour objectif de vous initier aux outils et concepts fondamentaux de l'informatique, qui sont essentiels dans le monde d'aujourd'hui. À travers quatre chapitres, vous découvrirez des compétences pratiques et théoriques qui vous permettront de manipuler des documents, résoudre des problèmes, organiser des données, et communiquer efficacement à l'aide des technologies numériques.</p>
-
-        <h3>Objectif du cours</h3>
-
-        <div class="definition">
-            <p>L'objectif de ce cours est de vous donner les bases nécessaires pour :</p>
-            <ul>
-                <li><strong>Créer et formater des documents</strong> : Vous apprendrez à utiliser un logiciel de traitement de texte pour rédiger des documents professionnels et bien structurés.</li>
-                <li><strong>Comprendre les algorithmes</strong> : Vous découvrirez ce qu'est un algorithme et comment il permet de résoudre des problèmes de manière logique et structurée.</li>
-                <li><strong>Manipuler des données</strong> : Vous serez initié aux tableurs, un outil puissant pour organiser, analyser et visualiser des données.</li>
-                <li><strong>Naviguer sur internet et créer des présentations</strong> : Vous apprendrez à utiliser l'internet de manière efficace et à créer des diaporamas pour présenter vos idées de manière claire et visuelle.</li>
-            </ul>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-4">1.4 Les mouvements</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les mouvements permettent de déplacer un sprite dans différentes directions (avancer, tourner, aller à…).
+            </p>
         </div>
-
-        <h3>Structure du cours</h3>
-
-        <div class="example">
-            <p>Le cours est divisé en quatre chapitres, chacun axé sur un aspect spécifique de l'informatique :</p>
-            
-            <table>
-                <tr>
-                    <th>Chapitre</th>
-                    <th>Contenu</th>
-                </tr>
-                <tr>
-                    <td><strong>1. Traitement de texte</strong></td>
-                    <td>Création, formatage et enrichissement de documents texte avec des images, tableaux, listes à puces, etc.</td>
-                </tr>
-                <tr>
-                    <td><strong>2. Introduction à l'algorithme</strong></td>
-                    <td>Découverte des algorithmes et initiation à la programmation visuelle avec SCRATCH.</td>
-                </tr>
-                <tr>
-                    <td><strong>3. Introduction aux tableurs</strong></td>
-                    <td>Organisation de données, calculs simples et création de graphiques.</td>
-                </tr>
-                <tr>
-                    <td><strong>4. Initiation à l'internet</strong></td>
-                    <td>Bases de la navigation web et création de diaporamas.</td>
-                </tr>
-            </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme où un sprite suit une trajectoire en spirale ou en parabole.</p>
         </div>
-
-        <h3>Pourquoi ce cours est important ?</h3>
-
-        <div class="note">
-            <p>Dans un monde de plus en plus numérique, maîtriser les outils informatiques est essentiel pour réussir à l'école, dans le monde professionnel, et dans la vie quotidienne. Ce cours vous donnera les compétences de base pour :</p>
-            <ul>
-                <li><strong>Travailler efficacement</strong> : Créer des documents professionnels, organiser des données, et résoudre des problèmes.</li>
-                <li><strong>Communiquer et partager des idées</strong> : Utiliser l'internet pour rechercher des informations et créer des présentations visuelles.</li>
-                <li><strong>Développer votre esprit logique</strong> : Comprendre les algorithmes et la programmation, qui sont à la base de nombreux systèmes informatiques.</li>
-            </ul>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-5">1.5 Le stylo et les dessins</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Le stylo permet de dessiner des lignes et des formes sur la scène en suivant les mouvements du sprite.
+            </p>
         </div>
-
-        <h3>Comment progresser dans ce cours ?</h3>
-
-        <div class="exercise">
-            <p>Pour tirer le meilleur parti de ce cours, nous vous encourageons à :</p>
-            <ul>
-                <li><strong>Pratiquer régulièrement</strong> : Les exercices pratiques et les projets vous permettront de mettre en application les concepts appris.</li>
-                <li><strong>Poser des questions</strong> : N'hésitez pas à demander de l'aide si vous rencontrez des difficultés.</li>
-                <li><strong>Explorer par vous-même</strong> : Essayez d'aller plus loin en explorant les fonctionnalités avancées des outils que vous découvrirez.</li>
-            </ul>
-            <p>Nous espérons que ce cours vous permettra de développer des compétences utiles et de vous familiariser avec les outils informatiques qui vous accompagneront tout au long de votre vie scolaire et professionnelle.</p>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme où un sprite dessine une étoile à 5 branches avec le stylo.</p>
         </div>
-
-        <div class="page-break"></div>
-
-        <h2 id="chapitre2">Chapitre 2 : Le traitement de texte</h2>
-
-        <p>Le traitement de texte est l'utilisation de logiciels informatiques pour créer, modifier, formater et imprimer des documents textuels. Ce chapitre vise à vous familiariser avec les fonctionnalités de base d'un logiciel de traitement de texte, telles que l'insertion d'objets, l'utilisation de styles, la création de tableaux, et bien plus encore.</p>
-
-        <h3 id="section2.1">2.1 Définition</h3>
-
-        <div class="definition">
-            <p>Le <strong>traitement de texte</strong> consiste à utiliser des logiciels comme Microsoft Word, LibreOffice Writer ou Google Docs pour produire des documents textuels. Ces outils permettent d'ajouter du texte, des images, des tableaux, et d'autres éléments pour créer des documents professionnels.</p>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-6">1.6 Le clavier</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Le clavier permet d’interagir avec le programme en utilisant des touches pour déclencher des actions.
+            </p>
         </div>
-
-        <h3 id="section2.2">2.2 Historique</h3>
-
-        <div class="example">
-            <ul>
-                <li><strong>Avant les ordinateurs</strong> : Les documents étaient rédigés à la main ou à l'aide de machines à écrire.</li>
-                <li><strong>Années 1980</strong> : Apparition des premiers logiciels de traitement de texte (ex : WordStar).</li>
-                <li><strong>Aujourd'hui</strong> : Les logiciels modernes permettent des mises en page complexes et l'insertion d'objets multimédias.</li>
-            </ul>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme où un sprite se déplace selon les touches fléchées et trace une figure géométrique.</p>
         </div>
-
-        <h3 id="section2.3">2.3 Motivation</h3>
-
-        <div class="definition">
-            <p>Apprendre le traitement de texte est essentiel pour :</p>
-            <ul>
-                <li>Rédiger des exposés, des rapports, des lettres officielles.</li>
-                <li>Créer des CV, des invitations, des menus.</li>
-                <li>Structurer des documents de manière professionnelle.</li>
-            </ul>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-7">1.7 Le son et effets sonores</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les sons rendent le programme plus interactif. On peut jouer un son selon des événements.
+            </p>
         </div>
-
-        <h3 id="section2.4">2.4 Utilisation dans la vie quotidienne</h3>
-
-        <div class="example">
-            <p>Voici quelques exemples concrets d'utilisation du traitement de texte :</p>
-            <ul>
-                <li>Rédaction d'un exposé scolaire.</li>
-                <li>Création d'un CV pour postuler à un stage.</li>
-                <li>Élaboration d'une lettre de motivation.</li>
-                <li>Organisation d'une fête (menu, invitations).</li>
-            </ul>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme où un sprite joue un son différent selon sa position sur l’axe x.</p>
         </div>
-
-        <h3 id="section2.5">2.5 Les fonctionnalités de base d'un logiciel de traitement de texte</h3>
-
-        <div class="example">
-            <p>Voici un tableau récapitulatif des fonctionnalités de base :</p>
-            
-            <table>
-                <tr>
-                    <th>Fonctionnalité</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
-                    <td>Insertion de texte</td>
-                    <td>Ajouter et modifier du texte dans un document.</td>
-                </tr>
-                <tr>
-                    <td>Insertion d'images</td>
-                    <td>Insérer des images pour illustrer le document.</td>
-                </tr>
-                <tr>
-                    <td>Création de tableaux</td>
-                    <td>Organiser des données sous forme de tableaux.</td>
-                </tr>
-                <tr>
-                    <td>Styles et correction</td>
-                    <td>Appliquer des styles prédéfinis et corriger les erreurs automatiquement.</td>
-                </tr>
-                <tr>
-                    <td>Puces et numérotation</td>
-                    <td>Créer des listes à puces ou numérotées.</td>
-                </tr>
-                <tr>
-                    <td>Lettrine</td>
-                    <td>Ajouter une grande lettre décorative au début d'un paragraphe.</td>
-                </tr>
-                <tr>
-                    <td>Gestion des fichiers</td>
-                    <td>Enregistrer et organiser les documents dans des dossiers.</td>
-                </tr>
-                <tr>
-                    <td>Table des matières</td>
-                    <td>Générer une table des matières automatique.</td>
-                </tr>
-            </table>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-8">1.8 Les variables</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les variables stockent des informations (nombres, texte) que le programme peut utiliser et modifier.
+            </p>
         </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme où une variable affiche la distance parcourue par un sprite.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-9">1.9 Si ... alors ... sinon</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les structures conditionnelles permettent d’exécuter des actions selon des conditions.
+            </p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme où un sprite change de direction s’il atteint un bord de l’écran.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-10">1.10 Opérations algébriques</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les opérations algébriques (addition, soustraction, multiplication, division) manipulent des nombres dans le programme.
+            </p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme où un sprite suit une trajectoire définie par une équation mathématique (ex : y = x²).</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch1-11">1.11 Blocs</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les blocs regroupent des instructions pour créer des fonctions réutilisables.
+            </p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un bloc "dessiner un polygone régulier" qui prend en entrée le nombre de côtés.</p>
+        </div>
+    </div>
 
-        <h3 id="section2.6">2.6 Exercices pratiques</h3>
+    <!-- CHAPITRE 2 -->
+    <h1 id="ch2">2. Introduction à l’algorithme</h1>
+    <div class="intro-box">
+        <p>
+            Ce chapitre introduit la notion d’algorithme, les variables, instructions, opérateurs, et organigrammes. Des exercices pratiques et des applications Scratch permettent de consolider ces bases pour résoudre des problèmes logiques et mathématiques.
+        </p>
+    </div>
+    <div class="section-card">
+        <h2 id="ch2-1">2.1 Structure générale d’un algorithme</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Un algorithme est une suite d’instructions logiques pour résoudre un problème. Il peut être représenté sous forme de texte, de code ou d’organigramme.
+            </p>
+        </div>
+        <div class="example-box">
+            <p><strong>Exemple :</strong> Algorithme pour calculer la somme de deux nombres :</p>
+            <ol>
+                <li>Demander à l’utilisateur de saisir le premier nombre.</li>
+                <li>Demander à l’utilisateur de saisir le deuxième nombre.</li>
+                <li>Ajouter les deux nombres.</li>
+                <li>Afficher le résultat.</li>
+            </ol>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Écrivez un algorithme pour calculer la moyenne de trois nombres.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch2-2">2.2 Variables et constantes</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les variables stockent des données modifiables ; les constantes stockent des valeurs fixes.
+            </p>
+        </div>
+        <table>
+            <tr>
+                <th>Élément</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Variable</td>
+                <td>Stocke des données modifiables (ex : âge).</td>
+            </tr>
+            <tr>
+                <td>Constante</td>
+                <td>Stocke des données fixes (ex : π).</td>
+            </tr>
+        </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un algorithme qui utilise une variable pour le rayon d’un cercle et une constante pour π, puis calcule la circonférence.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch2-3">2.3 Instructions</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les instructions décrivent les actions à exécuter dans un algorithme.
+            </p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Écrivez un algorithme qui demande le nom de l’utilisateur et affiche un message de bienvenue.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch2-4">2.4 Opérateurs</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les opérateurs manipulent des valeurs (addition, soustraction, multiplication, division).
+            </p>
+        </div>
+        <table>
+            <tr>
+                <th>Opérateur</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+            </tr>
+            <tr>
+                <td>−</td>
+                <td>Soustraction</td>
+            </tr>
+            <tr>
+                <td>×</td>
+                <td>Multiplication</td>
+            </tr>
+            <tr>
+                <td>÷</td>
+                <td>Division</td>
+            </tr>
+        </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Écrivez un algorithme qui utilise des opérateurs pour calculer l’aire d’un rectangle.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch2-5">2.5 Organigramme</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Un organigramme est une représentation visuelle d’un algorithme avec des symboles (rectangles, losanges, flèches…).
+            </p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Dessinez un organigramme pour déterminer si un nombre est positif, négatif ou nul.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch2-6">2.6 Application avec Scratch et approche mathématique</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les algorithmes peuvent être appliqués dans Scratch pour résoudre des problèmes mathématiques (aire, périmètre…).
+            </p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme Scratch pour calculer le volume d’une sphère avec la formule <code>V = (4/3) × π × r³</code>.</p>
+        </div>
+    </div>
 
-        <div class="exercise">
-            <h4>Exercice 1 : Créer un document simple</h4>
-            <div class="step">
-                <span class="step-title">Étape 1 :</span> Ouvrez un nouveau document.
-            </div>
-            <div class="step">
-                <span class="step-title">Étape 2 :</span> Ajoutez un titre (ex : "Mon premier document").
-            </div>
-            <div class="step">
-                <span class="step-title">Étape 3 :</span> Ajoutez deux sous-titres (ex : "Introduction" et "Conclusion").
-            </div>
-            <div class="step">
-                <span class="step-title">Étape 4 :</span> Rédigez un paragraphe sous chaque sous-titre.
-            </div>
+    <!-- CHAPITRE 3 -->
+    <h1 id="ch3">3. Introduction à l’intelligence artificielle</h1>
+    <div class="intro-box">
+        <p>
+            Ce chapitre aborde les bases de l’intelligence artificielle : définition, éthique, prompts efficaces, mini-projets. L’objectif est de comprendre les enjeux, les applications et les limites de l’IA aujourd’hui.
+        </p>
+    </div>
+    <div class="section-card">
+        <h2 id="ch3-1">3.1 Définition de l’intelligence artificielle</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> L’IA est la capacité d’une machine à imiter l’intelligence humaine (apprendre, raisonner, s’adapter).
+            </p>
+        </div>
+        <div class="example-box">
+            <p><strong>Exemple :</strong> Siri, Alexa : assistants virtuels utilisant l’IA pour comprendre et répondre aux questions.</p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Discutez en classe des exemples d’IA que vous utilisez au quotidien.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch3-2">3.2 Éthique de l’intelligence artificielle</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> L’éthique de l’IA traite des questions morales : protection des données, biais, impact sur l’emploi.
+            </p>
+        </div>
+        <table>
+            <tr>
+                <th>Problème éthique</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Protection des données</td>
+                <td>Comment les données personnelles sont-elles utilisées ?</td>
+            </tr>
+            <tr>
+                <td>Biais algorithmiques</td>
+                <td>Les algorithmes peuvent-ils être injustes ou discriminatoires ?</td>
+            </tr>
+            <tr>
+                <td>Impact sur l’emploi</td>
+                <td>L’IA remplace-t-elle des emplois humains ?</td>
+            </tr>
+        </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Débat : avantages et inconvénients de l’IA dans la société.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch3-3">3.3 Prompt efficace</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Un prompt est une instruction donnée à une IA pour obtenir une réponse précise. Un prompt efficace est clair, précis et structuré.
+            </p>
+        </div>
+        <div class="example-box">
+            <p><strong>Exemple :</strong> "Explique-moi les causes de la Révolution française en 1789" est plus efficace que "Parle-moi de l’histoire".</p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Écrivez trois prompts efficaces pour demander à une IA de résoudre des problèmes mathématiques.</p>
+        </div>
+    </div>
+    <div class="section-card">
+        <h2 id="ch3-4">3.4 Mini-projets</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les mini-projets permettent de mettre en pratique les concepts d’IA à travers des applications concrètes.
+            </p>
+        </div>
+        <table>
+            <tr>
+                <th>Projet</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Reconnaissance de formes</td>
+                <td>Utiliser des règles simples pour identifier des formes géométriques.</td>
+            </tr>
+            <tr>
+                <td>Chatbot simple</td>
+                <td>Créer un chatbot qui répond à des questions basiques.</td>
+            </tr>
+            <tr>
+                <td>Classification d’images</td>
+                <td>Classer des images selon leur contenu.</td>
+            </tr>
+        </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme Scratch où un sprite utilise des règles simples pour résoudre des problèmes mathématiques.</p>
+        </div>
+    </div>
+</div>
 
-            <h4>Exercice 2 : Insérer une image et un tableau</h4>
-            <div class="step">
-                <span class="step-title">Étape 1 :</span> Insérez une image dans un document.
-            </div>
-            <div class="step">
-                <span class="step-title">Étape 2 :</span> Créez un tableau de 3 colonnes et 4 lignes.
-            </div>
-            <div class="step">
-                <span class="step-title">Étape 3 :</span> Remplissez le tableau avec des données (ex : noms, âges, notes).
-            </div>
-
-            <h4>Exercice 3 : Utiliser les styles et la correction automatique</h4>
-            <div class="step">
-                <span 
 </body>
 </html>
