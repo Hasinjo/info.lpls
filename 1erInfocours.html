@@ -2,232 +2,330 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>1er Informatique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours d'informatique - Première - Chapitre 1</title>
     <style>
-        :root {
-            --primary: #3498db;
-            --secondary: #e74c3c;
-            --light: #f8f9fa;
-            --dark: #2c3e50;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
+            padding: 20px;
             color: #333;
         }
-        
         .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-        
         h1 {
-            color: var(--dark);
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid var(--primary);
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
         }
-        
         h2 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.5em;
+            color: #2980b9;
+            margin-top: 25px;
         }
-        
-        .correction-section {
-            margin: 25px 0;
+        h3 {
+            color: #16a085;
         }
-        
-        .code-block {
-            background: #f8f8f8;
-            border-left: 4px solid var(--primary);
+        .definition-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
             padding: 15px;
-            margin: 15px 0;
-            overflow-x: auto;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95em;
-            line-height: 1.5;
-            border-radius: 0 4px 4px 0;
-        }
-        
-        .explanation {
-            background-color: #e8f4fc;
-            padding: 15px;
-            border-radius: 4px;
             margin: 20px 0;
         }
-        
-        .explanation h3 {
-            color: var(--secondary);
-            margin-top: 0;
+        .example-box {
+            background-color: #e8f4fc;
+            border-left: 4px solid #2980b9;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
         }
-        
-        .number {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            width: 24px;
-            height: 24px;
-            text-align: center;
-            border-radius: 50%;
-            margin-right: 10px;
-            font-weight: bold;
-            line-height: 24px;
+        .method-box {
+            background-color: #e8f7f0;
+            border-left: 4px solid #16a085;
+            padding: 15px;
+            margin: 20px 0;
         }
-        
-        .note {
-            background: #fff8e1;
-            padding: 10px 15px;
-            border-left: 3px solid #ffc107;
-            margin: 15px 0;
+        .practice-box {
+            background-color: #fff3e0;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Exercice HTML/CSS pour Débutants</h1>
+        <h1>Chapitre 1 : Programmation avec Python</h1>
         
-        <div class="card">
-            <h2>Consignes de l'exercice</h2>
-            <p>Créez une page web personnelle contenant :</p>
-            <ol>
-                <li>Un en-tête avec votre prénom</li>
-                <li>Une section avec vos centres d'intérêt</li>
-                <li>Un pied de page avec mention de copyright</li>
-            </ol>
-            <p>Avec ces styles CSS :</p>
+        <h2>Introduction</h2>
+        <p>Ce chapitre introduit les concepts de base de la programmation en Python, en mettant l'accent sur les variables, les conditions, les fonctions, les boucles, et les structures de données.</p>
+        
+        <h2>Historique de Python</h2>
+        <p>Python a été créé par Guido van Rossum à la fin des années 1980. Le langage a été conçu pour être facile à lire et à écrire, avec une syntaxe claire et concise. Voici quelques étapes clés de son histoire :</p>
+        <ul>
+            <li><strong>1989</strong> : Début du développement de Python.</li>
+            <li><strong>1991</strong> : Première version publique de Python (0.9.0).</li>
+            <li><strong>2000</strong> : Sortie de Python 2.0, introduisant de nouvelles fonctionnalités comme les list comprehensions.</li>
+            <li><strong>2008</strong> : Sortie de Python 3.0, une version majeure qui n'est pas rétrocompatible avec Python 2.</li>
+            <li><strong>Aujourd'hui</strong> : Python est l'un des langages de programmation les plus populaires, utilisé dans des domaines variés comme le développement web, l'analyse de données, l'intelligence artificielle, et plus encore.</li>
+        </ul>
+        
+        <h2>1.1 Définition</h2>
+        <div class="definition-box">
+            <p>La programmation consiste à écrire des instructions (code) pour qu'un ordinateur exécute des tâches spécifiques.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>print("Bonjour le monde")</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
             <ul>
-                <li>Fond de page bleu clair</li>
-                <li>Titre principal centré et bleu foncé</li>
-                <li>Section avec fond blanc et ombre portée</li>
-                <li>Liste en police cursive</li>
+                <li>Comprendre le problème.</li>
+                <li>Écrire du code simple.</li>
+                <li>Tester et déboguer.</li>
+                <li>Utiliser un environnement de développement.</li>
             </ul>
         </div>
         
-        <div class="card">
-            <h2>Correction Complète</h2>
-            
-            <div class="correction-section">
-                <h3>Structure HTML</h3>
-                <div class="code-block">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="fr"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Ma Page Personnelle&lt;/title&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Mon Prénom&lt;/h1&gt;
-    &lt;/header&gt;
-    
-    &lt;main&gt;
-        &lt;section&gt;
-            &lt;h2&gt;Mes Centres d'Intérêt&lt;/h2&gt;
-            &lt;ul&gt;
-                &lt;li&gt;Musique&lt;/li&gt;
-                &lt;li&gt;Sport&lt;/li&gt;
-                &lt;li&gt;Voyages&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/section&gt;
-    &lt;/main&gt;
-    
-    &lt;footer&gt;
-        &lt;p&gt;&amp;copy; 2023 - Mon Prénom&lt;/p&gt;
-    &lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-                </div>
-                
-                <div class="explanation">
-                    <h3>Explications HTML</h3>
-                    <p><span class="number">1</span> <strong>DOCTYPE</strong> : Définit le type de document HTML5</p>
-                    <p><span class="number">2</span> <strong>Balises sémantiques</strong> : header, main, section, footer structurent la page</p>
-                    <p><span class="number">3</span> <strong>Hiérarchie</strong> : h1 pour le titre principal, h2 pour le sous-titre</p>
-                    <p><span class="number">4</span> <strong>Liste</strong> : ul/li crée une liste à puces non ordonnée</p>
-                </div>
-            </div>
-            
-            <div class="correction-section">
-                <h3>Feuille de Style CSS</h3>
-                <div class="code-block">
-/* Style général de la page */
-body {
-    background-color: #f0f8ff;    /* Fond bleu très clair */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-
-/* En-tête de page */
-header {
-    text-align: center;          /* Texte centré */
-    padding: 30px 0;             /* Espacement */
-}
-
-/* Titre principal */
-h1 {
-    color: #0066cc;              /* Couleur bleue */
-    font-size: 2.2em;            /* Taille du texte */
-    margin-bottom: 0;            /* Supprime la marge */
-}
-
-/* Section principale */
-section {
-    background-color: white;     /* Fond blanc */
-    padding: 20px;               /* Espacement interne */
-    border-radius: 8px;          /* Coins arrondis */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère */
-    max-width: 600px;            /* Largeur maximale */
-    margin: 20px auto;           /* Centrage */
-}
-
-/* Style de la liste */
-ul {
-    font-family: cursive;        /* Police cursive */
-    color: #333;                 /* Couleur de texte */
-    line-height: 1.8;            /* Hauteur de ligne */
-    padding-left: 20px;          /* Alignement des puces */
-}
-
-/* Pied de page */
-footer {
-    text-align: center;          /* Centrage du texte */
-    background-color: #e0e0e0;   /* Fond gris clair */
-    padding: 15px;               /* Espacement */
-    font-size: 0.9em;            /* Taille réduite */
-    margin-top: 30px;            /* Espace au-dessus */
-}
-                </div>
-                
-                <div class="explanation">
-                    <h3>Explications CSS</h3>
-                    <p><span class="number">1</span> <strong>Sélecteurs</strong> : On cible les éléments HTML à styliser</p>
-                    <p><span class="number">2</span> <strong>Couleurs</strong> : Utilisation de codes hexadécimaux (#0066cc)</p>
-                    <p><span class="number">3</span> <strong>Espacement</strong> : padding pour l'intérieur, margin pour l'extérieur</p>
-                    <p><span class="number">4</span> <strong>Typographie</strong> : font-family pour changer la police</p>
-                    
-                    <div class="note">
-                        <strong>Astuce :</strong> Les commentaires CSS (/* ... */) aident à organiser son code.
-                    </div>
-                </div>
-            </div>
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Écrire un programme qui demande à l'utilisateur son nom et affiche un message de bienvenue.</p>
         </div>
+        
+        <h2>1.2 Variables et expressions</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>Une variable est un conteneur pour stocker des données. Une expression est une combinaison de variables, opérateurs et valeurs.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>x = 10</p>
+            <p>y = 5</p>
+            <p>somme = x + y</p>
+            <p>print(somme) # Affiche 15</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Déclarer des variables.</li>
+                <li>Utiliser des opérateurs arithmétiques.</li>
+                <li>Comprendre les types de données.</li>
+                <li>Écrire des expressions.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Créer un programme qui calcule l'aire d'un rectangle.</p>
+        </div>
+        
+        <h2>1.3 Exécution conditionnelle</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>L'exécution conditionnelle permet d'exécuter du code en fonction de certaines conditions.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>age = 18</p>
+            <p>if age >= 18:</p>
+            <p>    print("Vous êtes majeur.")</p>
+            <p>else:</p>
+            <p>    print("Vous êtes mineur.")</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Comprendre les conditions.</li>
+                <li>Utiliser if, else, elif.</li>
+                <li>Imbriquer des conditions.</li>
+                <li>Tester toutes les possibilités.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Écrire un programme qui vérifie si un nombre est positif, négatif ou nul.</p>
+        </div>
+        
+        <h2>1.4 Fonctions</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>Une fonction est un bloc de code réutilisable qui effectue une tâche spécifique.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>def dire_bonjour(nom):</p>
+            <p>    print(f"Bonjour, {nom}!")</p>
+            <p>dire_bonjour("Alice")</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Définir une fonction avec def.</li>
+                <li>Utiliser des paramètres.</li>
+                <li>Retourner des valeurs avec return.</li>
+                <li>Documenter les fonctions.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Créer une fonction qui calcule la factorielle d'un nombre.</p>
+        </div>
+        
+        <h2>1.5 Itérations</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>Les itérations permettent de répéter des actions à l'aide de boucles.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>for i in range(5):</p>
+            <p>    print(i) # Affiche 0, 1, 2, 3, 4</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Utiliser for pour des boucles définies.</li>
+                <li>Utiliser while pour des boucles indéfinies.</li>
+                <li>Éviter les boucles infinies.</li>
+                <li>Utiliser break et continue.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Écrire un programme qui affiche les 10 premiers nombres pairs.</p>
+        </div>
+        
+        <h2>1.6 Listes, Dictionnaires, Ensembles</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <ul>
+                <li><strong>Liste</strong> : Une collection ordonnée d'éléments.</li>
+                <li><strong>Dictionnaire</strong> : Une collection de paires clé-valeur.</li>
+                <li><strong>Ensemble</strong> : Une collection non ordonnée d'éléments uniques.</li>
+            </ul>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>liste = [1, 2, 3]</p>
+            <p>dictionnaire = {"nom": "Alice", "âge": 25}</p>
+            <p>ensemble = {1, 2, 3}</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Manipuler les listes.</li>
+                <li>Utiliser les dictionnaires.</li>
+                <li>Travailler avec les ensembles.</li>
+                <li>Comprendre les méthodes courantes.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Créer un programme qui stocke les notes des élèves dans une liste et calcule la moyenne.</p>
+        </div>
+        
+        <h2>1.7 Mini-projet avec des notions mathématiques</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>Application des concepts appris dans un projet pratique.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>Créer un programme qui résout une équation du second degré.</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Décomposer le problème.</li>
+                <li>Utiliser des fonctions.</li>
+                <li>Tester le programme.</li>
+                <li>Documenter le code.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Implémenter un programme qui calcule les racines d'une équation quadratique.</p>
+        </div>
+        
+        <h2>Organigramme simple</h2>
+        <div style="text-align: center; margin: 20px 0;">
+            <p>Début</p>
+            <p>↓</p>
+            <p>Saisir un nombre</p>
+            <p>↓</p>
+            <p>Est-il positif ? → Oui → Afficher "Positif"</p>
+            <p>↓ Non</p>
+            <p>Afficher "Négatif ou nul"</p>
+            <p>↓</p>
+            <p>Fin</p>
+        </div>
+        
+        <h2>Tableau des opérateurs arithmétiques</h2>
+        <table>
+            <tr>
+                <th>Opérateur</th>
+                <th>Description</th>
+                <th>Exemple</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+                <td>3 + 5 = 8</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Soustraction</td>
+                <td>10 - 2 = 8</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+                <td>4 * 3 = 12</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Division</td>
+                <td>10 / 2 = 5</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
