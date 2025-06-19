@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours d'informatique - Première - Chapitre 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+        h3 {
+            color: #16a085;
+        }
+        .definition-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .example-box {
+            background-color: #e8f4fc;
+            border-left: 4px solid #2980b9;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .method-box {
+            background-color: #e8f7f0;
+            border-left: 4px solid #16a085;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .practice-box {
+            background-color: #fff3e0;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <header>
+        <h1>Cours d'informatique - Classe de Première G</h1>
+        <div class="author"></div>
+        <div class="date">25 avril 2025</div>
+    </header>
+        <h1>Chapitre 1 : Programmation avec Python</h1>
+        
+        <h2>Introduction</h2>
+        <p>Ce chapitre introduit les concepts de base de la programmation en Python, en mettant l'accent sur les variables, les conditions, les fonctions, les boucles, et les structures de données.</p>
+        
+        <h2>Historique de Python</h2>
+        <p>Python a été créé par Guido van Rossum à la fin des années 1980. Le langage a été conçu pour être facile à lire et à écrire, avec une syntaxe claire et concise. Voici quelques étapes clés de son histoire :</p>
+        <ul>
+            <li><strong>1989</strong> : Début du développement de Python.</li>
+            <li><strong>1991</strong> : Première version publique de Python (0.9.0).</li>
+            <li><strong>2000</strong> : Sortie de Python 2.0, introduisant de nouvelles fonctionnalités comme les list comprehensions.</li>
+            <li><strong>2008</strong> : Sortie de Python 3.0, une version majeure qui n'est pas rétrocompatible avec Python 2.</li>
+            <li><strong>Aujourd'hui</strong> : Python est l'un des langages de programmation les plus populaires, utilisé dans des domaines variés comme le développement web, l'analyse de données, l'intelligence artificielle, et plus encore.</li>
+        </ul>
+        
+        <h2>1.1 Définition</h2>
+        <div class="definition-box">
+            <p>La programmation consiste à écrire des instructions (code) pour qu'un ordinateur exécute des tâches spécifiques.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>print("Bonjour le monde")</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Comprendre le problème.</li>
+                <li>Écrire du code simple.</li>
+                <li>Tester et déboguer.</li>
+                <li>Utiliser un environnement de développement.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Écrire un programme qui demande à l'utilisateur son nom et affiche un message de bienvenue.</p>
+        </div>
+        
+        <h2>1.2 Variables et expressions</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>Une variable est un conteneur pour stocker des données. Une expression est une combinaison de variables, opérateurs et valeurs.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>x = 10</p>
+            <p>y = 5</p>
+            <p>somme = x + y</p>
+            <p>print(somme) # Affiche 15</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Déclarer des variables.</li>
+                <li>Utiliser des opérateurs arithmétiques.</li>
+                <li>Comprendre les types de données.</li>
+                <li>Écrire des expressions.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Créer un programme qui calcule l'aire d'un rectangle.</p>
+        </div>
+        
+        <h2>1.3 Exécution conditionnelle</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>L'exécution conditionnelle permet d'exécuter du code en fonction de certaines conditions.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>age = 18</p>
+            <p>if age >= 18:</p>
+            <p>    print("Vous êtes majeur.")</p>
+            <p>else:</p>
+            <p>    print("Vous êtes mineur.")</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Comprendre les conditions.</li>
+                <li>Utiliser if, else, elif.</li>
+                <li>Imbriquer des conditions.</li>
+                <li>Tester toutes les possibilités.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Écrire un programme qui vérifie si un nombre est positif, négatif ou nul.</p>
+        </div>
+        
+        <h2>1.4 Fonctions</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>Une fonction est un bloc de code réutilisable qui effectue une tâche spécifique.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>def dire_bonjour(nom):</p>
+            <p>    print(f"Bonjour, {nom}!")</p>
+            <p>dire_bonjour("Alice")</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Définir une fonction avec def.</li>
+                <li>Utiliser des paramètres.</li>
+                <li>Retourner des valeurs avec return.</li>
+                <li>Documenter les fonctions.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Créer une fonction qui calcule la factorielle d'un nombre.</p>
+        </div>
+        
+        <h2>1.5 Itérations</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>Les itérations permettent de répéter des actions à l'aide de boucles.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>for i in range(5):</p>
+            <p>    print(i) # Affiche 0, 1, 2, 3, 4</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Utiliser for pour des boucles définies.</li>
+                <li>Utiliser while pour des boucles indéfinies.</li>
+                <li>Éviter les boucles infinies.</li>
+                <li>Utiliser break et continue.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Écrire un programme qui affiche les 10 premiers nombres pairs.</p>
+        </div>
+        
+        <h2>1.6 Listes, Dictionnaires, Ensembles</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <ul>
+                <li><strong>Liste</strong> : Une collection ordonnée d'éléments.</li>
+                <li><strong>Dictionnaire</strong> : Une collection de paires clé-valeur.</li>
+                <li><strong>Ensemble</strong> : Une collection non ordonnée d'éléments uniques.</li>
+            </ul>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>liste = [1, 2, 3]</p>
+            <p>dictionnaire = {"nom": "Alice", "âge": 25}</p>
+            <p>ensemble = {1, 2, 3}</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Manipuler les listes.</li>
+                <li>Utiliser les dictionnaires.</li>
+                <li>Travailler avec les ensembles.</li>
+                <li>Comprendre les méthodes courantes.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Créer un programme qui stocke les notes des élèves dans une liste et calcule la moyenne.</p>
+        </div>
+        
+        <h2>1.7 Mini-projet avec des notions mathématiques</h2>
+        <div class="definition-box">
+            <h3>Définition</h3>
+            <p>Application des concepts appris dans un projet pratique.</p>
+        </div>
+        
+        <div class="example-box">
+            <p>Exemple :</p>
+            <p>Créer un programme qui résout une équation du second degré.</p>
+        </div>
+        
+        <div class="method-box">
+            <h3>Méthode</h3>
+            <ul>
+                <li>Décomposer le problème.</li>
+                <li>Utiliser des fonctions.</li>
+                <li>Tester le programme.</li>
+                <li>Documenter le code.</li>
+            </ul>
+        </div>
+        
+        <div class="practice-box">
+            <h3>Travaux pratiques</h3>
+            <p>Implémenter un programme qui calcule les racines d'une équation quadratique.</p>
+        </div>
+        
+        <h2>Organigramme simple</h2>
+        <div style="text-align: center; margin: 20px 0;">
+            <p>Début</p>
+            <p>↓</p>
+            <p>Saisir un nombre</p>
+            <p>↓</p>
+            <p>Est-il positif ? → Oui → Afficher "Positif"</p>
+            <p>↓ Non</p>
+            <p>Afficher "Négatif ou nul"</p>
+            <p>↓</p>
+            <p>Fin</p>
+        </div>
+        
+        <h2>Tableau des opérateurs arithmétiques</h2>
+        <table>
+            <tr>
+                <th>Opérateur</th>
+                <th>Description</th>
+                <th>Exemple</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+                <td>3 + 5 = 8</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Soustraction</td>
+                <td>10 - 2 = 8</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+                <td>4 * 3 = 12</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Division</td>
+                <td>10 / 2 = 5</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+    <h1>Chapitre 3 : Introduction à la cybersécurité</h1>
+    
+    <h2>Introduction</h2>
+    <p>Ce chapitre introduit les concepts de base de la cybersécurité, en mettant l'accent sur la protection des systèmes, des réseaux et des données contre les attaques numériques.</p>
+    
+    <h2>Historique de la cybersécurité</h2>
+    <p>La cybersécurité a évolué avec l'essor de l'informatique et d'Internet. Voici quelques étapes clés :</p>
+    <ul>
+        <li><strong>Années 1970</strong> : Premiers virus informatiques comme "Creeper".</li>
+        <li><strong>Années 1980</strong> : Création des premiers antivirus.</li>
+        <li><strong>Années 1990</strong> : Augmentation des cyberattaques (vers, chevaux de Troie).</li>
+        <li><strong>Années 2000</strong> : Attaques sophistiquées (ransomwares, DDoS).</li>
+        <li><strong>Aujourd'hui</strong> : Enjeu majeur contre le phishing, attaques zero-day, etc.</li>
+    </ul>
+
+    <h2>3.1 Définitions</h2>
+    <div class="definition-box">
+        <h3>3.1.1 Qu'est-ce que la cybersécurité ?</h3>
+        <p>Pratique de protéger systèmes, réseaux et programmes contre les attaques numériques visant à accéder, modifier ou détruire des informations sensibles.</p>
+        
+        <h3>3.1.2 Objectifs</h3>
+        <ul>
+            <li><strong>Confidentialité</strong> : Protéger l'accès aux informations</li>
+            <li><strong>Intégrité</strong> : Empêcher la modification non autorisée</li>
+            <li><strong>Disponibilité</strong> : Garantir l'accès aux systèmes</li>
+        </ul>
+    </div>
+
+    <h2>3.2 Notions de base et attaques populaires</h2>
+    <div class="definition-box">
+        <h3>3.2.1 Notions de base</h3>
+        <ul>
+            <li><strong>Virus</strong> : Programme malveillant qui infecte d'autres programmes</li>
+            <li><strong>Ver</strong> : Se propage sans intervention humaine</li>
+            <li><strong>Cheval de Troie</strong> : Logiciel malveillant déguisé</li>
+            <li><strong>Phishing</strong> : Technique pour voler des informations</li>
+        </ul>
+    </div>
+
+    <div class="definition-box">
+        <h3>3.2.2 Attaques populaires</h3>
+        <ul>
+            <li><strong>Ransomware</strong> : Chiffre les données et demande une rançon</li>
+            <li><strong>DDoS</strong> : Submerge un service de trafic pour le rendre indisponible</li>
+            <li><strong>Attaque zero-day</strong> : Exploite une vulnérabilité inconnue</li>
+            <li><strong>Ingénierie sociale</strong> : Manipulation psychologique</li>
+        </ul>
+    </div>
+
+    <h2>3.3 Exemples pratiques</h2>
+    <div class="method-box">
+        <h3>3.3.1 Protéger son ordinateur</h3>
+        <ul>
+            <li>Installer un antivirus à jour</li>
+            <li>Utiliser un pare-feu</li>
+            <li>Mettre à jour les logiciels</li>
+        </ul>
+        
+        <h3>3.3.2 Protéger ses comptes en ligne</h3>
+        <ul>
+            <li>Mots de passe forts et uniques</li>
+            <li>Authentification à deux facteurs (2FA)</li>
+            <li>Éviter les liens suspects</li>
+        </ul>
+    </div>
+
+    <div class="practice-box">
+        <h3>3.3.3 Travaux pratiques</h3>
+        <ul>
+            <li>Créer un mot de passe fort et expliquer sa sécurité</li>
+            <li>Configurer les paramètres de sécurité de base</li>
+            <li>Analyser un email de phishing</li>
+        </ul>
+    </div>
+
+    <h2>Organigramme de la cybersécurité</h2>
+    <div class="flow-chart">
+        <p>Début</p>
+        <p>↓</p>
+        <p>Identifier les menaces</p>
+        <p>↓</p>
+        <p>Protéger les systèmes</p>
+        <p>↓</p>
+        <p>Détecter les attaques</p>
+        <p>↓</p>
+        <p>Répondre aux incidents</p>
+        <p>↓</p>
+        <p>Récupérer après une attaque</p>
+        <p>↓</p>
+        <p>Fin</p>
+    </div>
+
+    <h2>Tableau des types de menaces</h2>
+    <table>
+        <tr>
+            <th>Type de menace</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Virus</td>
+            <td>Infecte d'autres programmes</td>
+        </tr>
+        <tr>
+            <td>Ver</td>
+            <td>Se propage sans intervention humaine</td>
+        </tr>
+        <tr>
+            <td>Cheval de Troie</td>
+            <td>Logiciel malveillant déguisé</td>
+        </tr>
+        <tr>
+            <td>Phishing</td>
+            <td>Technique pour voler des informations</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container">
+    <h1>Chapitre 4 : Rappel sur l'algorithme</h1>
+
+    <h2>Introduction</h2>
+    <p>Ce chapitre présente les concepts fondamentaux des algorithmes et des organigrammes pour résoudre des problèmes de manière structurée.</p>
+
+    <h2>4.1 Structure générale d'un algorithme</h2>
+    <div class="definition-box">
+        <h3>Définition</h3>
+        <p>Une séquence d'étapes bien définies pour résoudre un problème.</p>
+        
+        <h3>Composants</h3>
+        <ul>
+            <li><strong>Entrée</strong> : Données fournies</li>
+            <li><strong>Traitement</strong> : Étapes de calcul</li>
+            <li><strong>Sortie</strong> : Résultat produit</li>
+        </ul>
+    </div>
+
+    <div class="example-box">
+        <p>Exemple : Algorithme de somme</p>
+        <p>1. Lire le premier nombre (A)</p>
+        <p>2. Lire le deuxième nombre (B)</p>
+        <p>3. Calculer S = A + B</p>
+        <p>4. Afficher S</p>
+    </div>
+
+    <h2>4.2 Variables et constantes</h2>
+    <div class="definition-box">
+        <ul>
+            <li><strong>Variable</strong> : Valeur modifiable (ex: age = 25)</li>
+            <li><strong>Constante</strong> : Valeur fixe (ex: PI = 3.14)</li>
+        </ul>
+    </div>
+
+    <h2>4.3 Instructions</h2>
+    <div class="method-box">
+        <h3>Types</h3>
+        <ul>
+            <li><strong>Affectation</strong> : x = 5</li>
+            <li><strong>Conditionnelle</strong> : Si x > 10 alors...</li>
+            <li><strong>Itération</strong> : Pour i de 1 à 10 faire...</li>
+        </ul>
+    </div>
+
+    <h2>4.4 Opérateurs</h2>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Exemples</th>
+        </tr>
+        <tr>
+            <td>Arithmétiques</td>
+            <td>+ - * /</td>
+        </tr>
+        <tr>
+            <td>Comparaison</td>
+            <td>== != > <</td>
+        </tr>
+        <tr>
+            <td>Logiques</td>
+            <td>ET OU NON</td>
+        </tr>
+    </table>
+
+    <h2>4.5 Organigrammes</h2>
+    <div class="definition-box">
+        <h3>Symboles</h3>
+        <ul>
+            <li>Ovale : Début/Fin</li>
+            <li>Rectangle : Action</li>
+            <li>Losange : Décision</li>
+            <li>Flèches : Flux</li>
+        </ul>
+    </div>
+
+    <div class="flow-chart">
+        <p>Début</p>
+        <p>↓</p>
+        <p>Saisir un nombre (N)</p>
+        <p>↓</p>
+        <p>N > 0 ? → Oui → Afficher "Positif"</p>
+        <p>↓ Non</p>
+        <p>Afficher "Négatif ou nul"</p>
+        <p>↓</p>
+        <p>Fin</p>
+    </div>
+
+    <h2>4.6 Structures conditionnelles</h2>
+    <div class="example-box">
+        <p>Si (condition) alors</p>
+        <p>    Action 1</p>
+        <p>Sinon</p>
+        <p>    Action 2</p>
+        <p>Fin Si</p>
+    </div>
+
+    <h2>4.7 Structures itératives</h2>
+    <div class="example-box">
+        <p>Pour i de 1 à 10 faire</p>
+        <p>    Afficher i</p>
+        <p>Fin Pour</p>
+    </div>
+
+    <div class="practice-box">
+        <h3>Travaux pratiques</h3>
+        <p>Créer un algorithme qui :</p>
+        <ol>
+            <li>Calcule la moyenne de 3 nombres</li>
+            <li>Détermine si un nombre est pair/impair</li>
+            <li>Affiche les nombres de 1 à N avec une boucle</li>
+        </ol>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Chapitre 5 : Programmation Web</h1>
+
+    <h2>Introduction</h2>
+    <p>Découverte des langages fondamentaux pour créer des sites web : HTML, CSS et JavaScript.</p>
+
+    <div class="definition-box">
+        <h3>Trinité du web</h3>
+        <ul>
+            <li><strong>HTML</strong> : Structure du contenu (squelette)</li>
+            <li><strong>CSS</strong> : Présentation visuelle (habillage)</li>
+            <li><strong>JavaScript</strong> : Interactivité (comportement)</li>
+        </ul>
+    </div>
+
+    <h2>5.1 Historique</h2>
+    <ul>
+        <li><strong>1991</strong> : Création du HTML par Tim Berners-Lee</li>
+        <li><strong>1996</strong> : Première version standardisée du CSS</li>
+        <li><strong>1995</strong> : Naissance de JavaScript (Netscape)</li>
+        <li><strong>2000s</strong> : Ajax révolutionne l'interactivité</li>
+        <li><strong>2010s</strong> : Frameworks modernes (React, Angular, Vue)</li>
+    </ul>
+
+    <h2>5.2 Cycle de vie d'une page web</h2>
+    <div class="flow-chart">
+        <p>Client (Navigateur)</p>
+        <p>↑↓ Requête HTTP</p>
+        <p>Serveur Web</p>
+        <p>↑↓ Interrogation</p>
+        <p>Base de données</p>
+    </div>
+
+    <h2>5.3 Outils indispensables</h2>
+    <div class="method-box">
+        <h3>Environnement de développement</h3>
+        <ul>
+            <li>Éditeur de code (VS Code, Sublime Text)</li>
+            <li>Navigateurs (Chrome, Firefox avec outils développeurs)</li>
+            <li>Extensions utiles (Live Server, Emmet)</li>
+        </ul>
+    </div>
+
+    <h2>5.4 Bonnes pratiques</h2>
+    <table>
+        <tr>
+            <th>Élément</th>
+            <th>Règle</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Balises sémantiques, validation W3C</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Noms de classes clairs, responsive design</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Code modulaire, commentaires</td>
+        </tr>
+    </table>
+
+    <h2>5.5 Projet fil rouge</h2>
+    <div class="practice-box">
+        <h3>Création d'un site portfolio</h3>
+        <ol>
+            <li>Page d'accueil (HTML de base)</li>
+            <li>Style avec CSS</li>
+            <li>Galerie interactive (JavaScript)</li>
+            <li>Formulaire de contact</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <p>Exemple HTML minimal :</p>
+        <p>&lt;!DOCTYPE html&gt;</p>
+        <p>&lt;html lang="fr"&gt;</p>
+        <p>&lt;head&gt;</p>
+        <p>    &lt;title&gt;Mon Portfolio&lt;/title&gt;</p>
+        <p>&lt;/head&gt;</p>
+        <p>&lt;body&gt;</p>
+        <p>    &lt;h1&gt;Bienvenue&lt;/h1&gt;</p>
+        <p>&lt;/body&gt;</p>
+        <p>&lt;/html&gt;</p>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Chapitre 6 : HTML & CSS Pratique</h1>
+
+    <h2>6.1 Structure HTML de base</h2>
+    <div class="example-box">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Titre&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Mon Titre&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </div>
+
+    <h2>6.2 Balises essentielles</h2>
+    <table>
+        <tr>
+            <th>Balise</th>
+            <th>Usage</th>
+        </tr>
+        <tr>
+            <td>&lt;header&gt;</td>
+            <td>En-tête de page/section</td>
+        </tr>
+        <tr>
+            <td>&lt;nav&gt;</td>
+            <td>Menu de navigation</td>
+        </tr>
+        <tr>
+            <td>&lt;section&gt;</td>
+            <td>Section de contenu</td>
+        </tr>
+    </table>
+
+    <h2>6.3 CSS Fondamental</h2>
+    <div class="method-box">
+        <h3>Sélecteurs de base</h3>
+        <ul>
+            <li><strong>Élément</strong> : <code>p { color: blue; }</code></li>
+            <li><strong>Classe</strong> : <code>.ma-classe { }</code></li>
+            <li><strong>ID</strong> : <code>#mon-id { }</code></li>
+        </ul>
+    </div>
+
+    <h2>6.4 Modèle de boîte</h2>
+    <div class="flow-chart">
+        [Contenu]
+        ↓
+        Padding (espace intérieur)
+        ↓
+        Border (bordure)
+        ↓
+        Margin (marge extérieure)
+    </div>
+
+    <h2>6.5 Flexbox</h2>
+    <div class="example-box">
+        .conteneur {
+          display: flex;
+          justify-content: center;
+        }
+    </div>
+
+    <h2>6.6 Projet : Page Responsive</h2>
+    <div class="practice-box">
+        <h3>Objectifs</h3>
+        <ol>
+            <li>Créer une structure HTML valide</li>
+            <li>Styliser avec CSS</li>
+            <li>Adapter pour mobile (media queries)</li>
+        </ol>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Chapitre 7 : IA pour Débutants</h1>
+
+    <div class="definition-box">
+        <h2>7.1 Qu'est-ce que l'IA ?</h2>
+        <p>Systèmes capables de réaliser des tâches nécessitant normalement l'intelligence humaine :</p>
+        <ul>
+            <li>Reconnaissance vocale</li>
+            <li>Traitement du langage</li>
+            <li>Vision par ordinateur</li>
+            <li>Prise de décision</li>
+        </ul>
+    </div>
+
+    <h2>7.2 Applications Courantes</h2>
+    <table class="ia-applications">
+        <tr>
+            <th>Domaine</th>
+            <th>Exemple</th>
+        </tr>
+        <tr>
+            <td>Santé</td>
+            <td>Diagnostic médical assisté</td>
+        </tr>
+        <tr>
+            <td>Éducation</td>
+            <td>Tuteurs intelligents</td>
+        </tr>
+        <tr>
+            <td>Commerce</td>
+            <td>Recommandations personnalisées</td>
+        </tr>
+    </table>
+
+    <h2>7.3 Outils Accessibles</h2>
+    <div class="method-box">
+        <div class="tool-card">
+            <h3>ChatGPT</h3>
+            <p>Génération de texte et conversation</p>
+            <code>Prompt : "Explique la photosynthèse"</code>
+        </div>
+
+        <div class="tool-card">
+            <h3>Google Bard</h3>
+            <p>Recherche et synthèse d'information</p>
+        </div>
+    </div>
+
+    <h2>7.4 Projet Pratique</h2>
+    <div class="practice-box">
+        <h3>Créer un Chatbot Simple</h3>
+        <ol>
+            <li>Choisir une plateforme (ex: Poe.com)</li>
+            <li>Définir un scénario (service client)</li>
+            <li>Configurer les réponses de base</li>
+            <li>Tester et améliorer</li>
+        </ol>
+        
+        <div class="example-box">
+            Exemple de dialogue :
+            Utilisateur : "Bonjour"
+            Bot : "Bienvenue ! Comment puis-vous aider ?"
+        </div>
+    </div>
+
+    <h2>7.5 Éthique et Limites</h2>
+    <ul class="ethics-list">
+        <li>Vérifier les sources d'information</li>
+        <li>Attention aux biais algorithmiques</li>
+        <li>Ne pas partager de données sensibles</li>
+    </ul>
+</div>
+
+<div class="container">
+    <h1>Chapitre 8 : Concepts Avancés</h1>
+
+    <!-- Section Programmation Orientée Objet -->
+    <div class="advanced-section">
+        <h2>8.1 POO en Python</h2>
+        <div class="definition-box compact">
+            <h3>Concepts Clés</h3>
+            <ul class="concept-list">
+                <li><strong>Classes</strong> : Modèles pour créer des objets</li>
+                <li><strong>Héritage</strong> : Réutilisation de code</li>
+                <li><strong>Encapsulation</strong> : Protection des données</li>
+            </ul>
+        </div>
+
+        <div class="code-sample">
+            <h4>Exemple de Classe</h4>
+            <pre>
+class Animal:
+    def __init__(self, nom):
+        self.nom = nom
+    
+    def parler(self):
+        print(f"{self.nom} fait un son")</pre>
+        </div>
+    </div>
+
+    <!-- Section Bases de Données -->
+    <div class="advanced-section">
+        <h2>8.2 SQL Basique</h2>
+        <div class="two-column">
+            <div>
+                <h3>Commandes Essentielles</h3>
+                <ul>
+                    <li><code>SELECT * FROM table</code></li>
+                    <li><code>INSERT INTO table VALUES (...)</code></li>
+                    <li><code>UPDATE table SET champ=valeur</code></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Types de Données</h3>
+                <ul>
+                    <li>INTEGER</li>
+                    <li>VARCHAR</li>
+                    <li>BOOLEAN</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Sécurité -->
+    <div class="advanced-section security">
+        <h2>8.3 Bonnes Pratiques Sécurité</h2>
+        <div class="practice-box urgent">
+            <h3>À Faire Absolument</h3>
+            <ol>
+                <li>Hachage des mots de passe</li>
+                <li>Validation des entrées utilisateur</li>
+                <li>Mises à jour régulières</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Projet Intégré -->
+    <div class="project-section">
+        <h2>8.4 Projet : Système de Gestion</h2>
+        <div class="project-steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <p>Conception UML</p>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <p>Implémentation POO</p>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <p>Stockage Base de Données</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h1>📚 Aide-Mémoire : Synthèse des Chapitres</h1>
+
+    <!-- Résumé par Chapitre -->
+    <div class="summary-grid">
+        <!-- Python -->
+        <div class="summary-card python">
+            <h2>Chapitre 1 : Python</h2>
+            <ul class="key-points">
+                <li>🐍 Langage polyvalent et lisible</li>
+                <li>🔢 Variables, conditions, boucles</li>
+                <li>📋 Structures de données : listes, dictionnaires</li>
+                <li>🧮 Modules mathématiques</li>
+            </ul>
+            <div class="code-quicklook">
+                <pre>def somme(a, b):
+    return a + b</pre>
+            </div>
+        </div>
+
+        <!-- Excel -->
+        <div class="summary-card excel">
+            <h2>Chapitre 2 : Excel</h2>
+            <ul class="key-points">
+                <li>📊 Analyse de données</li>
+                <li>🧹 Nettoyage des données</li>
+                <li>📈 Formules clés : SOMME, MOYENNE, SI</li>
+                <li>📉 Visualisation avec graphiques</li>
+            </ul>
+        </div>
+
+        <!-- Cybersécurité -->
+        <div class="summary-card security">
+            <h2>Chapitre 3 : Cybersécurité</h2>
+            <ul class="key-points">
+                <li>🛡️ Principes : CIA (Confidentialité, Intégrité, Disponibilité)</li>
+                <li>⚠️ Menaces : virus, phishing, ransomware</li>
+                <li>🔐 Bonnes pratiques : mots de passe forts, 2FA</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Deuxième Ligne -->
+    <div class="summary-grid">
+        <!-- Algorithmie -->
+        <div class="summary-card algo">
+            <h2>Chapitre 4 : Algorithmes</h2>
+            <ul class="key-points">
+                <li>📝 Structure séquentielle</li>
+                <li>↳ Conditions (SI...ALORS...SINON)</li>
+                <li>🔄 Boucles (POUR, TANT QUE)</li>
+                <li>📊 Organigrammes</li>
+            </ul>
+        </div>
+
+        <!-- Web -->
+        <div class="summary-card web">
+            <h2>Chapitre 5-6 : Programmation Web</h2>
+            <ul class="key-points">
+                <li>🛠️ Trinité : HTML (structure), CSS (style), JS (interactivité)</li>
+                <li>📱 Responsive design</li>
+                <li>🎨 Flexbox/Grid pour les layouts</li>
+                <li>✉️ Gestion des formulaires</li>
+            </ul>
+        </div>
+
+        <!-- IA -->
+        <div class="summary-card ai">
+            <h2>Chapitre 7 : IA</h2>
+            <ul class="key-points">
+                <li>🧠 ML : Apprentissage supervisé/non-supervisé</li>
+                <li>💡 Outils : ChatGPT, Google Bard</li>
+                <li>⚖️ Éthique et limites</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tableau Synoptique -->
+    <div class="cheatsheet">
+        <h2>🔖 Aide-Mémoire Technique</h2>
+        <table class="quick-reference">
+            <tr>
+                <th>Domaine</th>
+                <th>Élément Clé</th>
+                <th>Exemple</th>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Boucle FOR</td>
+                <td><code>for i in range(5):</code></td>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>Balise Formulaire</td>
+                <td><code>&lt;input type="text"&gt;</code></td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Flexbox</td>
+                <td><code>display: flex;</code></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Conseils Finaux -->
+    <div class="final-tips">
+        <h2>💡 Conseils pour Réussir</h2>
+        <div class="tips-container">
+            <div class="tip-card">
+                <h3>🛠️ Pratique Régulière</h3>
+                <p>30 min/jour > 5h en une fois</p>
+            </div>
+            <div class="tip-card">
+                <h3>🔍 Debugging</h3>
+                <p>Utilisez print() et console.log()</p>
+            </div>
+            <div class="tip-card">
+                <h3>📚 Documentation</h3>
+                <p>MDN, W3Schools, Python Docs</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

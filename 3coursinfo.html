@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3ème - Chapitre 1 : Scratch Avancé</title>
+    <style>
+      nav ul li a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+nav ul li a:hover {
+    color: #e67e22;
+    text-decoration: underline;
+}
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 35px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        
+        .intro-box {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .definition-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #5dade2;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .example-box {
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .figure {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        
+        .figure img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .practice-box {
+            background-color: #fff3e0;
+            border-left: 4px solid #ffa000;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .practice-box h3 {
+            color: #e65100;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+         <header>
+        <h1>Cours d'informatique - Classe de 3 ème</h1>
+        <div class="author"></div>
+        <div class="date">25 avril 2025</div>
+    </header>
+      <!-- Table des matières cliquable -->
+<nav class="section-card" style="margin-bottom:40px;">
+    <h2 style="margin-top:0;">Table des matières</h2>
+    <ul style="list-style: none; padding-left: 0;">
+        <li><a href="#ch1">1. Programmation avancée avec Scratch</a>
+            <ul>
+                <li><a href="#ch1-1">1.1 Notions de coordonnées</a></li>
+                <li><a href="#ch1-2">1.2 Création des instructions</a></li>
+                <li><a href="#ch1-3">1.3 Les boucles</a></li>
+                <li><a href="#ch1-4">1.4 Les mouvements</a></li>
+                <li><a href="#ch1-5">1.5 Le stylo et les dessins</a></li>
+                <li><a href="#ch1-6">1.6 Le clavier</a></li>
+                <li><a href="#ch1-7">1.7 Le son et effets sonores</a></li>
+                <li><a href="#ch1-8">1.8 Les variables</a></li>
+                <li><a href="#ch1-9">1.9 Si ... alors ... sinon</a></li>
+                <li><a href="#ch1-10">1.10 Opérations algébriques</a></li>
+                <li><a href="#ch1-11">1.11 Blocs</a></li>
+            </ul>
+        </li>
+        <li><a href="#ch2">2. Introduction à l’algorithme</a>
+            <ul>
+                <li><a href="#ch2-1">2.1 Structure générale d’un algorithme</a></li>
+                <li><a href="#ch2-2">2.2 Variables et constantes</a></li>
+                <li><a href="#ch2-3">2.3 Instructions</a></li>
+                <li><a href="#ch2-4">2.4 Opérateurs</a></li>
+                <li><a href="#ch2-5">2.5 Organigramme</a></li>
+                <li><a href="#ch2-6">2.6 Application avec Scratch et approche mathématique</a></li>
+            </ul>
+        </li>
+        <li><a href="#ch3">3. Introduction à l’intelligence artificielle</a>
+            <ul>
+                <li><a href="#ch3-1">3.1 Définition de l’intelligence artificielle</a></li>
+                <li><a href="#ch3-2">3.2 Éthique de l’intelligence artificielle</a></li>
+                <li><a href="#ch3-3">3.3 Prompt efficace</a></li>
+                <li><a href="#ch3-4">3.4 Mini-projets</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+        <h1>Chapitre 1 : Programmation avancée avec Scratch</h1>
+        
+        <div class="intro-box">
+            <p>Dans ce chapitre, nous allons explorer les concepts avancés de Scratch pour créer des programmes interactifs et résoudre des problèmes mathématiques. Vous apprendrez à utiliser les coordonnées, les boucles, les variables et bien plus encore !</p>
+        </div>
+
+        <!-- Section 1.1 -->
+        <div class="section-card">
+            <h2>1.1 Notions de coordonnées</h2>
+            
+            <div class="definition-box">
+                <p><strong>Définition :</strong> Les coordonnées sont des paires de nombres (x, y) qui définissent la position d'un point dans un plan cartésien.</p>
+                <ul>
+                    <li>Axe x : position horizontale</li>
+                    <li>Axe y : position verticale</li>
+                </ul>
+            </div>
+            
+            <div class="example-box">
+                <p>Exemple : La position (100, 50) place le sprite à 100 unités à droite et 50 unités vers le haut.</p>
+            </div>
+            
+            <div class="figure">
+                <p><strong>Figure 1.1 :</strong> Représentation des coordonnées dans Scratch</p>
+                <img src="https://scratch.mit.edu/images/scratch-interface-coordinates.png" alt="Coordonnées Scratch" style="max-width: 300px;">
+            </div>
+            
+            <div class="practice-box">
+                <h3>Exercice pratique</h3>
+                <p>Créez un programme où un sprite se déplace pour dessiner un carré en utilisant les coordonnées :</p>
+                <ul>
+                    <li>(0, 0)</li>
+                    <li>(100, 0)</li>
+                    <li>(100, 100)</li>
+                    <li>(0, 100)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 1.2 -->
+        <div class="section-card">
+            <h2>1.2 Création des instructions</h2>
+            
+            <div class="definition-box">
+                <p><strong>Définition :</strong> Les instructions sont des commandes qui contrôlent les actions des sprites.</p>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Bloc</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><code>avancer de 10 pas</code></td>
+                    <td>Déplace le sprite de 10 pas</td>
+                </tr>
+                <tr>
+                    <td><code>tourner de 90 degrés</code></td>
+                    <td>Fait pivoter le sprite</td>
+                </tr>
+                <tr>
+                    <td><code>aller à x:100 y:50</code></td>
+                    <td>Positionne le sprite aux coordonnées (100,50)</td>
+                </tr>
+            </table>
+            
+            <div class="practice-box">
+                <h3>Exercice pratique</h3>
+                <p>Créez un programme où un sprite suit un chemin triangulaire en utilisant :</p>
+                <ul>
+                    <li>Instructions de mouvement</li>
+                    <li>Instructions de rotation</li>
+                    <li>Bloc "répéter"</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 1.3 -->
+        <div class="section-card">
+            <h2>1.3 Les boucles</h2>
+            
+            <div class="definition-box">
+                <p><strong>Définition :</strong> Une boucle permet de répéter une série d'instructions.</p>
+                <p>Bloc Scratch : <code>répéter (10) fois</code></p>
+            </div>
+            
+            <div class="example-box">
+                <p>Exemple pour dessiner un cercle :</p>
+                <pre>
+répéter (24) fois
+    avancer de 10 pas
+    tourner de 15 degrés
+fin</pre>
+            </div>
+            
+            <div class="practice-box">
+                <h3>Exercice pratique</h3>
+                <p>Créez un programme qui dessine :</p>
+                <ol>
+                    <li>Un hexagone régulier</li>
+                    <li>Une étoile à 5 branches</li>
+                    <li>Une spirale carrée</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+    <h1>Chapitre 2 : Introduction à l’algorithme</h1>
+
+    <div class="intro-box">
+        <p>
+            Dans ce chapitre, nous avons exploré les concepts de base des algorithmes, y compris les variables, les instructions, les opérateurs et les organigrammes. Ces concepts sont essentiels pour résoudre des problèmes de manière structurée et logique. Les exercices pratiques permettent de renforcer ces compétences et de préparer les élèves pour le chapitre suivant sur l’intelligence artificielle.
+        </p>
+    </div>
+
+    <!-- Section 2.1 -->
+    <div class="section-card">
+        <h2>2.1 Structure générale d’un algorithme</h2>
+        <div class="definition-box">
+            <p><strong>Définition :</strong> Un algorithme est une suite d’instructions logiques pour résoudre un problème. Il peut être représenté sous forme de texte, de code ou d’organigramme.</p>
+        </div>
+        <div class="example-box">
+            <p>Exemple d’algorithme pour calculer la somme de deux nombres :</p>
+<pre>
+1. Demander à l’utilisateur de saisir le premier nombre.
+2. Demander à l’utilisateur de saisir le deuxième nombre.
+3. Ajouter les deux nombres.
+4. Afficher le résultat.
+</pre>
+        </div>
+        <div class="figure">
+            <p><strong>Figure 2.1 :</strong> Organigramme d’un algorithme simple</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Flowchart_sum_fr.svg/400px-Flowchart_sum_fr.svg.png" alt="Organigramme somme de deux nombres" style="max-width: 300px;">
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Écrivez un algorithme pour calculer la moyenne de trois nombres.</p>
+        </div>
+    </div>
+
+    <!-- Section 2.2 -->
+    <div class="section-card">
+        <h2>2.2 Variables et constantes</h2>
+        <div class="definition-box">
+            <p><strong>Définition :</strong> Les variables stockent des données qui peuvent changer pendant l’exécution du programme, tandis que les constantes stockent des valeurs fixes.</p>
+        </div>
+        <div class="example-box">
+            <p>Exemple :</p>
+            <ul>
+                <li>Une variable peut stocker l’âge d’un utilisateur.</li>
+                <li>Une constante peut stocker la valeur de π (3.1416).</li>
+            </ul>
+        </div>
+        <table>
+            <tr>
+                <th>Élément</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Variable</td>
+                <td>Stocke des données modifiables (exemple : âge).</td>
+            </tr>
+            <tr>
+                <td>Constante</td>
+                <td>Stocke des données fixes (exemple : π).</td>
+            </tr>
+        </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un algorithme qui utilise une variable pour stocker le rayon d’un cercle et une constante pour π, puis calcule et affiche la circonférence.</p>
+        </div>
+    </div>
+
+    <!-- Section 2.3 -->
+    <div class="section-card">
+        <h2>2.3 Instructions</h2>
+        <div class="definition-box">
+            <p><strong>Définition :</strong> Les instructions sont des étapes spécifiques dans un algorithme qui décrivent une action à exécuter.</p>
+        </div>
+        <div class="example-box">
+            <p>Exemple : Une instruction peut être "ajouter deux nombres" ou "afficher un message".</p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Écrivez un algorithme qui demande à l’utilisateur de saisir son nom, puis affiche un message de bienvenue.</p>
+        </div>
+    </div>
+
+    <!-- Section 2.4 -->
+    <div class="section-card">
+        <h2>2.4 Opérateurs</h2>
+        <div class="definition-box">
+            <p><strong>Définition :</strong> Les opérateurs permettent de manipuler des valeurs (addition, soustraction, multiplication, division, etc.).</p>
+        </div>
+        <div class="example-box">
+            <p>Exemple : Utiliser l’opérateur <code>+</code> pour additionner deux nombres.</p>
+        </div>
+        <table>
+            <tr>
+                <th>Opérateur</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+            </tr>
+            <tr>
+                <td>−</td>
+                <td>Soustraction</td>
+            </tr>
+            <tr>
+                <td>×</td>
+                <td>Multiplication</td>
+            </tr>
+            <tr>
+                <td>÷</td>
+                <td>Division</td>
+            </tr>
+        </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Écrivez un algorithme qui utilise des opérateurs pour calculer l’aire d’un rectangle.</p>
+        </div>
+    </div>
+
+    <!-- Section 2.5 -->
+    <div class="section-card">
+        <h2>2.5 Organigramme</h2>
+        <div class="definition-box">
+            <p><strong>Définition :</strong> Un organigramme est une représentation visuelle d’un algorithme à l’aide de symboles (rectangles, losanges, flèches, etc.).</p>
+        </div>
+        <div class="example-box">
+            <p>Exemple : Organigramme pour déterminer si un nombre est pair ou impair :</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Pair_Impair_Organigramme.svg/400px-Pair_Impair_Organigramme.svg.png" alt="Organigramme pair/impair" style="max-width: 300px;">
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Dessinez un organigramme pour un algorithme qui détermine si un nombre est positif, négatif ou nul.</p>
+        </div>
+    </div>
+
+    <!-- Section 2.6 -->
+    <div class="section-card">
+        <h2>2.6 Application avec Scratch et approche mathématique</h2>
+        <div class="definition-box">
+            <p><strong>Définition :</strong> Les algorithmes peuvent être appliqués dans Scratch pour résoudre des problèmes mathématiques, comme le calcul de l’aire ou du périmètre.</p>
+        </div>
+        <div class="example-box">
+            <p>Exemple : Créer un programme Scratch pour calculer l’aire d’un triangle.</p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme Scratch pour calculer le volume d’une sphère en utilisant la formule <code>V = (4/3) × π × r³</code>.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Chapitre 3 : Introduction à l’intelligence artificielle</h1>
+
+    <div class="intro-box">
+        <p>
+            Dans ce chapitre, nous explorons les concepts de base de l’intelligence artificielle (IA), en abordant des sujets comme l’éthique, la formulation de prompts efficaces et la réalisation de mini-projets. Ces notions permettent de comprendre le fonctionnement de l’IA et son utilisation responsable. Les exercices pratiques et débats en classe renforcent ces compétences et préparent à des sujets plus avancés en informatique.
+        </p>
+    </div>
+
+    <!-- Section 3.1 -->
+    <div class="section-card">
+        <h2>3.1 Définition de l’intelligence artificielle</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> L’intelligence artificielle (IA) est la capacité d’une machine à imiter l’intelligence humaine, en apprenant, en raisonnant et en s’adaptant à de nouvelles situations.
+            </p>
+        </div>
+        <div class="example-box">
+            <p>
+                <strong>Exemple :</strong> Les assistants virtuels comme Siri ou Alexa utilisent l’IA pour comprendre et répondre aux questions des utilisateurs.
+            </p>
+        </div>
+        <div class="figure">
+            <p><strong>Figure 3.1 :</strong> Représentation simplifiée de l’intelligence artificielle</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Artificial_Intelligence_%26_Data_Flow_French.svg/400px-Artificial_Intelligence_%26_Data_Flow_French.svg.png" alt="Schéma IA" style="max-width: 300px;">
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Discutez en classe des exemples d’IA que vous utilisez dans votre vie quotidienne.</p>
+        </div>
+    </div>
+
+    <!-- Section 3.2 -->
+    <div class="section-card">
+        <h2>3.2 Éthique de l’intelligence artificielle</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> L’éthique de l’IA traite des questions morales liées à l’utilisation de l’intelligence artificielle, comme la protection des données, les biais algorithmiques et l’impact sur l’emploi.
+            </p>
+        </div>
+        <div class="example-box">
+            <p>
+                <strong>Exemple :</strong> Les biais algorithmiques peuvent conduire à des décisions injustes, comme dans les systèmes de recrutement automatisés.
+            </p>
+        </div>
+        <table>
+            <tr>
+                <th>Problème éthique</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Protection des données</td>
+                <td>Comment les données personnelles sont-elles collectées et utilisées ?</td>
+            </tr>
+            <tr>
+                <td>Biais algorithmiques</td>
+                <td>Les algorithmes peuvent-ils être injustes ou discriminatoires ?</td>
+            </tr>
+            <tr>
+                <td>Impact sur l’emploi</td>
+                <td>L’IA remplace-t-elle des emplois humains ?</td>
+            </tr>
+        </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Organisez un débat en classe sur les avantages et les inconvénients de l’IA dans la société.</p>
+        </div>
+    </div>
+
+    <!-- Section 3.3 -->
+    <div class="section-card">
+        <h2>3.3 Prompt efficace</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Un prompt est une instruction donnée à un système d’IA pour obtenir une réponse spécifique. Un prompt efficace est clair, précis et bien structuré.
+            </p>
+        </div>
+        <div class="example-box">
+            <p>
+                <strong>Exemple :</strong> Au lieu de dire « Parle-moi de l’histoire », un prompt efficace serait « Explique-moi les causes de la Révolution française en 1789 ».
+            </p>
+        </div>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Écrivez trois prompts efficaces pour demander à une IA de résoudre des problèmes mathématiques.</p>
+        </div>
+    </div>
+
+    <!-- Section 3.4 -->
+    <div class="section-card">
+        <h2>3.4 Mini-projets</h2>
+        <div class="definition-box">
+            <p>
+                <strong>Définition :</strong> Les mini-projets permettent de mettre en pratique les concepts d’IA à travers des applications simples et concrètes.
+            </p>
+        </div>
+        <div class="example-box">
+            <p>
+                <strong>Exemple :</strong> Créer un programme Scratch où un sprite reconnaît des formes géométriques.
+            </p>
+        </div>
+        <table>
+            <tr>
+                <th>Projet</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Reconnaissance de formes</td>
+                <td>Utiliser des règles simples pour identifier des formes géométriques.</td>
+            </tr>
+            <tr>
+                <td>Chatbot simple</td>
+                <td>Créer un chatbot qui répond à des questions basiques.</td>
+            </tr>
+            <tr>
+                <td>Classification d’images</td>
+                <td>Classer des images en fonction de leur contenu.</td>
+            </tr>
+        </table>
+        <div class="practice-box">
+            <h3>Exercice pratique</h3>
+            <p>Créez un programme Scratch où un sprite utilise des règles simples pour résoudre des problèmes mathématiques.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours d'informatique - Sixième</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #16a085;
+        }
+        .definition {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+        .definition dt {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .exercise {
+            background-color: #e8f4f8;
+            border: 1px solid #b3e0ff;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .exercise h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .date {
+            text-align: right;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        .author {
+            text-align: right;
+            font-weight: bold;
+        }
+
+    .toc {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+    .toc ul {
+        list-style-type: none;
+        padding-left: 30px;
+    }
+    .toc li {
+        margin-bottom: 8px;
+        position: relative;
+    }
+    .toc li:before {
+        content: "•";
+        color: #2980b9;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cours d'informatique - Classe de 6 ème</h1>
+        <div class="author"></div>
+        <div class="date">25 avril 2025</div>
+    </header>
+
+<h1>Table des matières</h1>
+
+<section id="sommaire">
+    <h2>1 Les fondements historiques et sociaux de la science informatique</h2>
+    <ul class="toc">
+        <li>1.1 Définitions importantes</li>
+        <li>1.2 Historique des machines</li>
+        <li>1.3 Champs d'application des ordinateurs</li>
+        <li>1.4 Organes de base d'un ordinateur</li>
+        <li>1.5 Exercice pratique</li>
+    </ul>
+    
+    <h2>2 Introduction au traitement de texte</h2>
+    <ul class="toc">
+        <li>2.1 Microsoft Office Word</li>
+        <li>2.2 LibreOffice Writer</li>
+        <li>2.3 Comparaison entre Microsoft Word et LibreOffice Writer</li>
+        <li>2.4 Mini-projet : Créer un document de présentation</li>
+    </ul>
+    
+    <h2>3 Initiation à l'Internet</h2>
+    <ul class="toc">
+        <li>3.1 Définition de l'internet</li>
+        <li>3.2 Comment accéder à Internet ?</li>
+        <li>3.3 Les navigateurs web</li>
+        <li>3.4 Recherche sur Internet</li>
+        <li>3.5 Exercice pratique : Recherche d'information sur Internet</li>
+    </ul>
+    
+    <h2>4 Premiers pas avec la programmation SCRATCH</h2>
+    <ul class="toc">
+        <li>4.1 Définition : SCRATCH</li>
+        <li>4.2 Interface de SCRATCH</li>
+        <li>4.3 Les bases de la programmation avec SCRATCH
+            <ul>
+                <li>4.3.1 Mouvement</li>
+                <li>4.3.2 Apparence</li>
+                <li>4.3.3 Événements</li>
+            </ul>
+        </li>
+        <li>4.4 Créer un premier programme
+            <ul>
+                <li>4.4.1 Étapes pour créer un programme simple</li>
+                <li>4.4.2 Exemple de programme</li>
+            </ul>
+        </li>
+        <li>4.5 Faire des dessins avec SCRATCH</li>
+        <li>4.6 Exercice pratique : Dessiner une maison avec SCRATCH</li>
+    </ul>
+</section>
+
+    <h1>Chapitre 1 : Les fondements historiques et sociaux de la science informatique</h1>
+    
+    <section id="definitions">
+        <h2>1.1 Définitions importantes</h2>
+        <div class="definition">
+            <dl>
+                <dt>Information</dt>
+                <dd>Donnée interprétée et utilisée pour prendre des décisions.</dd>
+                
+                <dt>Donnée</dt>
+                <dd>Élément brut qui peut être traité pour produire de l'information.</dd>
+                
+                <dt>Traitement</dt>
+                <dd>Processus de transformation des données en information.</dd>
+                
+                <dt>Ordinateur</dt>
+                <dd>Machine électronique capable de traiter des données.</dd>
+                
+                <dt>Informatique</dt>
+                <dd>Science du traitement automatique de l'information.</dd>
+            </dl>
+        </div>
+    </section>
+    
+    <section id="historique">
+        <h2>1.2 Historique des machines</h2>
+        
+        <h3>Les premières machines</h3>
+        <ul>
+            <li><strong>Pascaline (1642)</strong> : La première machine à calculer mécanique, inventée par Blaise Pascal.</li>
+            <li><strong>Machine analytique de Charles Babbage (1837)</strong> : Une machine programmable considérée comme l'ancêtre des ordinateurs modernes.</li>
+        </ul>
+        
+        <h3>Les ordinateurs modernes</h3>
+        <ul>
+            <li><strong>ENIAC (1945)</strong> : Le premier ordinateur électronique programmable, utilisé pour des calculs militaires.</li>
+            <li><strong>Premiers micro-ordinateurs (années 1970)</strong> : L'arrivée des ordinateurs personnels comme l'Apple II et le Commodore 64.</li>
+        </ul>
+        
+        <h3>Évolution des technologies</h3>
+        <p>Des ordinateurs centraux aux smartphones : Montrer comment les ordinateurs sont devenus plus petits, plus puissants et plus accessibles.</p>
+    </section>
+    
+    <section id="applications">
+        <h2>1.3 Champs d'application des ordinateurs</h2>
+        <ul>
+            <li><strong>Calcul scientifique</strong> : Utilisation des ordinateurs pour des simulations et des modélisations complexes. Exemple : Prévisions météorologiques.</li>
+            <li><strong>Contrôle des processus</strong> : Automatisation des processus industriels. Exemple : Robots dans les usines.</li>
+            <li><strong>Robotique</strong> : Utilisation des robots dans divers domaines. Exemple : Robots médicaux, robots domestiques.</li>
+            <li><strong>Jeux vidéo</strong> : Conception et développement de jeux vidéo. Exemple : Jeux comme Minecraft ou Fortnite.</li>
+            <li><strong>Bureautique</strong> : Utilisation des ordinateurs pour le traitement de texte, les tableurs et les présentations. Exemple : Microsoft Word, Excel.</li>
+            <li><strong>Communication</strong> : Utilisation des ordinateurs pour communiquer. Exemple : E-mails, réseaux sociaux.</li>
+            <li><strong>Cinéma</strong> : Utilisation des ordinateurs pour les effets spéciaux et l'animation. Exemple : Films comme Avatar.</li>
+            <li><strong>Graphisme</strong> : Conception graphique et infographie. Exemple : Logiciels comme Photoshop.</li>
+            <li><strong>Informatique pédagogique</strong> : Utilisation des ordinateurs pour l'éducation. Exemple : Logiciels éducatifs, cours en ligne.</li>
+        </ul>
+    </section>
+    
+    <section id="organes">
+        <h2>1.4 Organes de base d'un ordinateur</h2>
+        
+        <h3>Organes essentiels</h3>
+        <ul>
+            <li><strong>Unité centrale</strong> : Le cerveau de l'ordinateur, composé du processeur, de la mémoire et du disque dur.</li>
+            <li><strong>Écran</strong> : Affiche les informations traitées par l'ordinateur.</li>
+            <li><strong>Clavier et souris</strong> : Permettent d'interagir avec l'ordinateur.</li>
+        </ul>
+        
+        <h3>Périphériques</h3>
+        <ul>
+            <li><strong>Imprimante</strong> : Permet d'imprimer des documents.</li>
+            <li><strong>Scanner</strong> : Permet de numériser des documents papier.</li>
+            <li><strong>Modem</strong> : Permet de se connecter à Internet.</li>
+            <li><strong>Clé USB</strong> : Permet de stocker et transporter des données.</li>
+        </ul>
+    </section>
+    
+    <section id="exercice">
+        <h2>1.5 Exercice pratique</h2>
+        <div class="exercise">
+            <h3>Pour mettre en pratique les connaissances acquises, voici un exercice simple :</h3>
+            <ol>
+                <li><strong>Recherche historique</strong> : Recherchez une machine historique (exemple : Pascaline, ENIAC) et présentez son fonctionnement en quelques phrases.</li>
+                <li><strong>Identification des composants</strong> : Identifiez les organes essentiels (unité centrale, écran, clavier, souris) et les périphériques (imprimante, scanner, modem) sur une image d'ordinateur.</li>
+                <li><strong>Discussion sur les applications</strong> : Choisissez un champ d'application des ordinateurs (exemple : jeux vidéo, cinéma) et expliquez comment les ordinateurs sont utilisés dans ce domaine.</li>
+            </ol>
+        </div>
+    </section>
+
+<h1>Chapitre 2 : Introduction au traitement de texte</h1>
+
+<section id="microsoft-word">
+    <h2>2.1 Microsoft Office Word</h2>
+    
+    <h3>Présentation</h3>
+    <p>Microsoft Word est un logiciel de traitement de texte largement utilisé pour créer des documents professionnels, scolaires ou personnels.</p>
+    
+    <h3>Fonctionnalités de base</h3>
+    <ul>
+        <li><strong>Saisie de texte</strong> : Apprendre à taper du texte dans un document.</li>
+        <li><strong>Mise en forme</strong> : Modifier la police, la taille, la couleur et les styles (gras, italique, souligné).</li>
+        <li><strong>Insertion d'éléments</strong> : Ajouter des images, des tableaux et des graphiques.</li>
+        <li><strong>Enregistrement et impression</strong> : Sauvegarder un document et l'imprimer.</li>
+    </ul>
+    
+    <div class="exercise">
+        <h3>Exercice pratique</h3>
+        <ol>
+            <li>Ouvrez Microsoft Word.</li>
+            <li>Saisissez un texte court (exemple : "Bonjour, je m'appelle [votre nom].").</li>
+            <li>Modifiez la police en Arial, la taille en 14, et appliquez le style gras.</li>
+            <li>Insérez une image à partir de votre ordinateur.</li>
+            <li>Enregistrez le document sous le nom "MonPremierDocument.docx".</li>
+        </ol>
+    </div>
+</section>
+
+<section id="libreoffice-writer">
+    <h2>2.2 LibreOffice Writer</h2>
+    
+    <h3>Présentation</h3>
+    <p>LibreOffice Writer est une alternative gratuite et open-source à Microsoft Word. Il offre des fonctionnalités similaires pour le traitement de texte.</p>
+    
+    <h3>Fonctionnalités de base</h3>
+    <ul>
+        <li><strong>Saisie de texte</strong> : Taper du texte dans un document.</li>
+        <li><strong>Mise en forme</strong> : Changer la police, la taille, la couleur et les styles.</li>
+        <li><strong>Insertion d'éléments</strong> : Ajouter des images, des tableaux et des graphiques.</li>
+        <li><strong>Enregistrement</strong> : Sauvegarder un document au format ODT ou PDF.</li>
+    </ul>
+    
+    <div class="exercise">
+        <h3>Exercice pratique</h3>
+        <ol>
+            <li>Ouvrez LibreOffice Writer.</li>
+            <li>Saisissez un texte court (exemple : "Ceci est un document créé avec LibreOffice.").</li>
+            <li>Modifiez la police en Times New Roman, la taille en 12, et appliquez le style italique.</li>
+            <li>Insérez un tableau simple avec 2 colonnes et 3 lignes.</li>
+            <li>Enregistrez le document sous le nom "MonDocumentLibreOffice.odt".</li>
+        </ol>
+    </div>
+</section>
+
+<section id="comparaison">
+    <h2>2.3 Comparaison entre Microsoft Word et LibreOffice Writer</h2>
+    
+    <ol>
+        <li><strong>Microsoft Word</strong> :
+            <ul>
+                <li>Logiciel payant (inclus dans Microsoft Office).</li>
+                <li>Interface moderne et intuitive.</li>
+                <li>Compatibilité élevée avec les formats de fichiers courants (DOCX, PDF).</li>
+            </ul>
+        </li>
+        <li><strong>LibreOffice Writer</strong> :
+            <ul>
+                <li>Logiciel gratuit et open-source.</li>
+                <li>Interface simple mais efficace.</li>
+                <li>Formats de fichiers natifs (ODT), mais compatible avec DOCX et PDF.</li>
+            </ul>
+        </li>
+    </ol>
+</section>
+
+<section id="mini-projet">
+    <h2>2.4 Mini-projet : Créer un document de présentation</h2>
+    
+    <div class="exercise">
+        <h3>Pour mettre en pratique les compétences acquises, voici un projet simple :</h3>
+        <ol>
+            <li>Choisissez un sujet (exemple : votre animal préféré, un pays, un sport).</li>
+            <li>Créez un document de présentation avec Microsoft Word ou LibreOffice Writer.</li>
+            <li>Incluez les éléments suivants :
+                <ul>
+                    <li>Un titre mis en forme (gras, taille 16, centré).</li>
+                    <li>Un paragraphe de texte décrivant le sujet.</li>
+                    <li>Une image illustrant le sujet.</li>
+                    <li>Un tableau avec des informations complémentaires (exemple : dates, chiffres).</li>
+                </ul>
+            </li>
+            <li>Enregistrez le document et imprimez-le si possible.</li>
+        </ol>
+    </div>
+</section>
+
+
+<h1>Chapitre 3 : Initiation à l'Internet</h1>
+
+<section id="definition-internet">
+    <h2>3.1 Définition de l'internet</h2>
+    <p>C'est un réseau mondial qui relie des millions d'ordinateurs et d'appareils à travers le monde. Il permet d'accéder à des informations, de communiquer et de partager des données.</p>
+    
+    <h3>Usages courants d'Internet</h3>
+    <ul>
+        <li><strong>Recherche d'information</strong> : Trouver des réponses à des questions, des articles, des vidéos, etc.</li>
+        <li><strong>Communication</strong> : Envoyer des e-mails, discuter en ligne, utiliser les réseaux sociaux.</li>
+        <li><strong>Divertissement</strong> : Regarder des vidéos, écouter de la musique, jouer à des jeux en ligne.</li>
+        <li><strong>Éducation</strong> : Suivre des cours en ligne, accéder à des ressources pédagogiques.</li>
+    </ul>
+</section>
+
+<section id="acces-internet">
+    <h2>3.2 Comment accéder à Internet ?</h2>
+    
+    <h3>Les moyens de connexion</h3>
+    <ul>
+        <li><strong>Wi-Fi</strong> : Connexion sans fil à un réseau local.</li>
+        <li><strong>Câble Ethernet</strong> : Connexion filaire pour une connexion plus stable.</li>
+        <li><strong>Données mobiles</strong> : Connexion via un réseau de téléphonie mobile.</li>
+    </ul>
+    
+    <h3>Les appareils connectés</h3>
+    <ul>
+        <li>Ordinateurs</li>
+        <li>Tablettes</li>
+        <li>Smartphones</li>
+        <li>Objets connectés</li>
+    </ul>
+</section>
+
+<section id="navigateurs">
+    <h2>3.3 Les navigateurs web</h2>
+    
+    <h3>Qu'est-ce qu'un navigateur web ?</h3>
+    <p>Un navigateur web est un logiciel qui permet d'accéder à Internet et de consulter des sites web.</p>
+    
+    <h3>Exemples de navigateurs</h3>
+    <ul>
+        <li>Google Chrome</li>
+        <li>Mozilla Firefox</li>
+        <li>Microsoft Edge</li>
+        <li>Safari</li>
+    </ul>
+    
+    <h3>Fonctionnalités de base</h3>
+    <ul>
+        <li><strong>Onglets</strong> : Permet d'ouvrir plusieurs pages web dans une même fenêtre.</li>
+        <li><strong>Favoris</strong> : Enregistrer des sites web pour y accéder rapidement.</li>
+        <li><strong>Historique</strong> : Consulter les pages web visitées précédemment.</li>
+    </ul>
+</section>
+
+<section id="recherche-internet">
+    <h2>3.4 Recherche sur Internet</h2>
+    
+    <h3>Qu'est-ce qu'un moteur de recherche ?</h3>
+    <p>Un moteur de recherche est un outil qui permet de trouver des informations sur Internet en tapant des mots-clés.</p>
+    
+    <h3>Exemples de moteurs de recherche</h3>
+    <ul>
+        <li>Google</li>
+        <li>Bing</li>
+        <li>Yahoo</li>
+    </ul>
+    
+    <h3>Techniques de recherche efficaces</h3>
+    <ul>
+        <li>Utiliser des mots-clés précis.</li>
+        <li>Utiliser les guillemets pour rechercher une expression exacte.</li>
+        <li>Utiliser les opérateurs de recherche (exemple : site: pour limiter la recherche à un site spécifique).</li>
+    </ul>
+    
+    <h3>Évaluation des sources</h3>
+    <ul>
+        <li>Vérifier la fiabilité des sources (sites officiels, articles de qualité).</li>
+        <li>Éviter les informations non vérifiées ou trompeuses.</li>
+    </ul>
+</section>
+
+<section id="exercice-recherche">
+    <h2>3.5 Exercice pratique : Recherche d'information sur Internet</h2>
+    
+    <div class="exercise">
+        <h3>Pour mettre en pratique les compétences acquises, voici un exercice simple :</h3>
+        <ol>
+            <li>Choisissez un sujet qui vous intéresse (exemple : les animaux, les pays, les inventions).</li>
+            <li>Utilisez un moteur de recherche pour trouver des informations fiables sur ce sujet.</li>
+            <li>Rassemblez les informations dans un document texte.</li>
+            <li>Présentez vos résultats à la classe en utilisant les techniques de communication apprises.</li>
+        </ol>
+    </div>
+</section>
+
+
+<h1>Chapitre 4 : Premiers pas avec la programmation SCRATCH</h1>
+
+<section id="definition-scratch">
+    <h2>4.1 Définition : SCRATCH</h2>
+    <p>Le SCRATCH est un langage de programmation visuel conçu pour les débutants. Il permet de créer des animations, des jeux et des histoires interactives en assemblant des blocs de code.</p>
+</section>
+
+<section id="interface-scratch">
+    <h2>4.2 Interface de SCRATCH</h2>
+    <ul>
+        <li><strong>Scène</strong> : L'espace où les animations et les dessins sont affichés.</li>
+        <li><strong>Lutins</strong> : Les personnages ou objets qui interagissent sur la scène.</li>
+        <li><strong>Blocs de programmation</strong> : Les instructions que l'on assemble pour créer des programmes.</li>
+    </ul>
+    
+    <h3>Objectif</h3>
+    <p>Apprendre à créer des programmes simples en utilisant des blocs de code.</p>
+</section>
+
+<section id="bases-programmation">
+    <h2>4.3 Les bases de la programmation avec SCRATCH</h2>
+    
+    <h3>4.3.1 Mouvement</h3>
+    <ul>
+        <li>Utiliser les blocs de mouvement pour déplacer un lutin sur la scène.</li>
+        <li>Exemple : Faire avancer un lutin de 10 pas, puis le faire tourner de 90 degrés.</li>
+    </ul>
+    
+    <h3>4.3.2 Apparence</h3>
+    <ul>
+        <li>Changer l'apparence d'un lutin (costume, taille, effet visuel).</li>
+        <li>Exemple : Faire dire "Bonjour!" à un lutin pendant 2 secondes.</li>
+    </ul>
+    
+    <h3>4.3.3 Événements</h3>
+    <ul>
+        <li>Utiliser les blocs d'événements pour déclencher des actions.</li>
+        <li>Exemple : Démarrer un programme lorsque l'utilisateur clique sur le drapeau vert.</li>
+    </ul>
+</section>
+
+<section id="premier-programme">
+    <h2>4.4 Créer un premier programme</h2>
+    
+    <h3>4.4.1 Étapes pour créer un programme simple</h3>
+    <ol>
+        <li>Ouvrez SCRATCH et créez un nouveau projet.</li>
+        <li>Sélectionnez un lutin (exemple : le chat).</li>
+        <li>Utilisez les blocs de mouvement pour faire bouger le lutin.</li>
+        <li>Ajoutez un bloc d'apparence pour faire dire "Bonjour!" au lutin.</li>
+        <li>Utilisez un bloc d'événement pour démarrer le programme lorsque l'utilisateur clique sur le drapeau vert.</li>
+    </ol>
+    
+    <h3>4.4.2 Exemple de programme</h3>
+    <ul>
+        <li>Faire avancer le chat de 50 pas.</li>
+        <li>Faire dire "Bonjour!" pendant 2 secondes.</li>
+        <li>Faire tourner le chat de 90 degrés.</li>
+    </ul>
+</section>
+
+<section id="dessins-scratch">
+    <h2>4.5 Faire des dessins avec SCRATCH</h2>
+    
+    <ol>
+        <li><strong>Utilisation du stylo</strong> : SCRATCH permet de dessiner sur la scène en utilisant l'extension "Stylo".</li>
+        <li><strong>Blocs de base du stylo</strong> :
+            <ul>
+                <li>stylo en bas : Active le stylo pour dessiner.</li>
+                <li>stylo en haut : Désactive le stylo.</li>
+                <li>effacer tout : Efface tous les dessins de la scène.</li>
+                <li>changer la couleur du stylo : Modifie la couleur du tracé.</li>
+            </ul>
+        </li>
+        <li><strong>Dessiner des formes géométriques</strong> :
+            <ul>
+                <li><strong>Carré</strong> :
+                    <ol type="a">
+                        <li>Activer le stylo avec stylo en bas.</li>
+                        <li>Faire avancer le lutin de 100 pas.</li>
+                        <li>Faire tourner le lutin de 90 degrés.</li>
+                        <li>Répéter les étapes 2 et 3 trois fois pour compléter le carré.</li>
+                    </ol>
+                </li>
+                <li><strong>Triangle</strong> :
+                    <ol type="a">
+                        <li>Activer le stylo avec stylo en bas.</li>
+                        <li>Faire avancer le lutin de 100 pas.</li>
+                        <li>Faire tourner le lutin de 120 degrés.</li>
+                        <li>Répéter les étapes 2 et 3 deux fois pour compléter le triangle.</li>
+                    </ol>
+                </li>
+                <li><strong>Rectangle</strong> :
+                    <ol type="a">
+                        <li>Activer le stylo avec stylo en bas.</li>
+                        <li>Faire avancer le lutin de 150 pas.</li>
+                        <li>Faire tourner le lutin de 90 degrés.</li>
+                        <li>Faire avancer le lutin de 100 pas.</li>
+                        <li>Faire tourner le lutin de 90 degrés.</li>
+                        <li>Répéter les étapes 2 à 5 une fois pour compléter le rectangle.</li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</section>
+
+<section id="exercice-maison">
+    <h2>4.6 Exercice pratique : Dessiner une maison avec SCRATCH</h2>
+    
+    <div class="exercise">
+        <h3>Pour mettre en pratique les compétences acquises, voici un projet simple :</h3>
+        <ol>
+            <li>Créez un nouveau projet dans SCRATCH.</li>
+            <li>Ajoutez un lutin (exemple : un crayon ou un personnage).</li>
+            <li>Utilisez les blocs de mouvement et le stylo pour dessiner une maison :
+                <ul>
+                    <li>Dessinez un carré pour la base de la maison.</li>
+                    <li>Dessinez un triangle pour le toit.</li>
+                    <li>Ajoutez une porte et une fenêtre en utilisant des lignes supplémentaires.</li>
+                </ul>
+            </li>
+            <li>Testez votre programme et ajustez les paramètres si nécessaire.</li>
+        </ol>
+    </div>
+</section>
+</body>
+</html>

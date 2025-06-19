@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours d'informatique - Seconde</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin-top: 40px;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 0 5px 5px 0;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 5px;
+        }
+        h4 {
+            margin-top: 20px;
+            color: #16a085;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .toc {
+            background: #f1f9fe;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .toc li {
+            margin-bottom: 8px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: 500;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            background: #e8f4fc;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .example {
+            background: #e8f8f0;
+            padding: 15px;
+            border-left: 3px solid #2ecc71;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .exercise {
+            background: #fef9e7;
+            padding: 15px;
+            border-left: 3px solid #f39c12;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            line-height: 1.4;
+            border-left: 3px solid #9b59b6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .page-break {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+            margin: 40px 0;
+        }
+        .note {
+            background: #fff8e1;
+            padding: 10px 15px;
+            border-left: 3px solid #ffc107;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        .warning {
+            background: #ffebee;
+            padding: 10px 15px;
+            border-left: 3px solid #f44336;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Cours d'informatique - Classe de Seconde</h1>
+            <p>28 avril 2025</p>
+        </div>
+
+        <div class="toc">
+            <h2>Table des matières</h2>
+            <ul>
+                <li><a href="#chapitre1">1. Introduction à la base de données (BDD) avec Excel et sécurité informatique</a>
+                    <ul>
+                        <li><a href="#section1.1">1.1 Introduction à la base de données avec Excel</a></li>
+                        <li><a href="#section1.2">1.2 Sécurité informatique</a></li>
+                    </ul>
+                </li>
+                <li><a href="#chapitre2">2. Algorithmes et organigrammes, introduction à la programmation Web</a>
+                    <ul>
+                        <li><a href="#section2.1">2.1 Algorithmes et organigrammes</a></li>
+                        <li><a href="#section2.2">2.2 Introduction à la programmation Web</a></li>
+                    </ul>
+                </li>
+                <li><a href="#chapitre3">3. Premier pas avec le langage PYTHON et introduction à l'intelligence artificielle (IA)</a>
+                    <ul>
+                        <li><a href="#section3.1">3.1 Premier pas avec le langage PYTHON</a></li>
+                        <li><a href="#section3.2">3.2 Introduction à l'intelligence artificielle (IA)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2 id="chapitre1">Chapitre 1 : Introduction à la base de données (BDD) avec Excel et sécurité informatique</h2>
+
+        <h3 id="section1.1">1.1 Introduction à la base de données avec Excel</h3>
+
+        <h4>Description des concepts de base des systèmes d'information</h4>
+
+        <div class="definition">
+            <p><strong>Définition :</strong></p>
+            <ul>
+                <li><strong>Base de données (BDD)</strong> : Une base de données est une collection organisée de données, généralement stockée et accessible électroniquement. Elle permet de stocker, manipuler et récupérer des informations de manière efficace.</li>
+                <li><strong>Système d'information</strong> : Un système d'information est un ensemble de ressources (matérielles, logicielles, humaines) qui permet de collecter, stocker, traiter et diffuser des informations.</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple :</strong></p>
+            <ul>
+                <li>Une base de données peut être utilisée pour gérer les informations des élèves d'une école : noms, prénoms, âges, notes, etc.</li>
+                <li>Un système d'information scolaire peut inclure une base de données, des logiciels de gestion des notes, et des outils de communication avec les parents.</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Ouvrez Excel et créez une nouvelle feuille de calcul.</li>
+                <li>Créez une base de données simple avec les colonnes suivantes : <strong>Nom</strong>, <strong>Prénom</strong>, <strong>Âge</strong>, <strong>Note</strong>.</li>
+                <li>Ajoutez 5 lignes de données fictives (exemple : Alice Dupont, 16 ans, 15/20).</li>
+                <li>Utilisez la fonction de tri pour classer les élèves par ordre alphabétique de nom.</li>
+                <li>Utilisez la fonction de filtre pour afficher uniquement les élèves ayant une note supérieure à 10.</li>
+            </ol>
+        </div>
+
+        <h4>Méthodes de conception de BDD</h4>
+
+        <div class="definition">
+            <p><strong>Définition :</strong></p>
+            <ul>
+                <li><strong>Modélisation</strong> : La modélisation consiste à créer un modèle de données qui représente la structure et les relations entre les données. Un exemple courant est le diagramme entité-relation (ER).</li>
+                <li><strong>Normalisation</strong> : La normalisation est un processus qui consiste à organiser les données pour éviter les redondances et les anomalies. Elle permet de garantir l'intégrité des données.</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Créez un diagramme entité-relation simple pour une base de données de bibliothèque avec les entités suivantes : <strong>Livre</strong>, <strong>Auteur</strong>, <strong>Emprunteur</strong>.</li>
+                <li>Identifiez les relations entre ces entités (exemple : un livre est écrit par un auteur, un livre est emprunté par un emprunteur).</li>
+                <li>Créez une base de données Excel en respectant les principes de normalisation (exemple : une table pour les livres, une table pour les auteurs, et une table pour les emprunteurs).</li>
+            </ol>
+        </div>
+
+        <h3 id="section1.2">1.2 Sécurité informatique</h3>
+
+        <h4>1.2.1 Situation problème 1 : Virus informatique</h4>
+
+        <div class="definition">
+            <p><strong>Définition :</strong></p>
+            <p>Un virus informatique est un programme malveillant qui s'installe sur un ordinateur sans l'autorisation de l'utilisateur. Il peut endommager les fichiers, ralentir le système ou voler des informations.</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple :</strong></p>
+            <p>Un utilisateur ouvre une pièce jointe dans un e-mail suspect. Le fichier contient un virus qui infecte l'ordinateur et crypte les fichiers, rendant impossible leur accès.</p>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Discutez en classe des précautions à prendre pour éviter les virus (exemple : ne pas ouvrir les pièces jointes suspectes, utiliser un antivirus).</li>
+                <li>Installez un antivirus sur votre ordinateur (si possible) et effectuez une analyse complète du système.</li>
+            </ol>
+        </div>
+
+        <h4>1.2.2 Situation problème 2 : Phishing</h4>
+
+        <div class="definition">
+            <p><strong>Définition :</strong></p>
+            <p>Le phishing est une technique utilisée par les cybercriminels pour tromper les utilisateurs et voler leurs informations personnelles (mots de passe, numéros de carte bancaire).</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple :</strong></p>
+            <p>Un utilisateur reçoit un e-mail qui semble provenir de sa banque, lui demandant de cliquer sur un lien pour mettre à jour ses informations. Le lien redirige vers un site frauduleux qui vole les informations saisies.</p>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Identifiez les signes d'un e-mail de phishing (exemple : adresse e-mail suspecte, fautes d'orthographe, demande d'informations personnelles).</li>
+                <li>Créez un faux e-mail de phishing (à des fins éducatives) et discutez en classe des éléments qui le rendent suspect.</li>
+            </ol>
+        </div>
+
+        <h4>1.2.3 Objectifs de la sécurité informatique</h4>
+
+        <div class="definition">
+            <p><strong>Définition :</strong></p>
+            <p>Les objectifs de la sécurité informatique sont de protéger les données contre les accès non autorisés, d'assurer la confidentialité, l'intégrité et la disponibilité des informations.</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple :</strong></p>
+            <ul>
+                <li><strong>Confidentialité</strong> : Seules les personnes autorisées peuvent accéder aux données.</li>
+                <li><strong>Intégrité</strong> : Les données ne doivent pas être modifiées de manière non autorisée.</li>
+                <li><strong>Disponibilité</strong> : Les données doivent être accessibles lorsque nécessaire.</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Discutez en classe des mesures pour garantir la confidentialité, l'intégrité et la disponibilité des données (exemple : chiffrement des données, sauvegardes régulières).</li>
+                <li>Créez un mot de passe fort et expliquez pourquoi il est sécurisé (exemple : utilisation de lettres, chiffres et symboles).</li>
+            </ol>
+        </div>
+
+        <h4>1.2.4 Concepts de cybersécurité et cybercriminalité</h4>
+
+        <div class="definition">
+            <p><strong>Définition :</strong></p>
+            <ul>
+                <li><strong>Cybersécurité</strong> : La cybersécurité est la pratique qui consiste à protéger les systèmes informatiques contre les attaques et les accès non autorisés.</li>
+                <li><strong>Cybercriminalité</strong> : La cybercriminalité regroupe toutes les activités criminelles commises via Internet (exemple : piratage, vol de données).</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple :</strong></p>
+            <p>Une entreprise subit une attaque par ransomware (logiciel qui crypte les données et demande une rançon pour les débloquer).</p>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Recherchez un cas réel de cybercriminalité (exemple : une attaque de ransomware célèbre) et présentez-le à la classe.</li>
+                <li>Discutez des mesures de cybersécurité que l'entreprise aurait pu mettre en place pour éviter l'attaque.</li>
+            </ol>
+        </div>
+
+        <h4>1.2.5 Protection des données</h4>
+
+        <div class="definition">
+            <p><strong>Définition :</strong></p>
+            <p>La protection des données consiste à mettre en place des mesures pour empêcher l'accès non autorisé, la modification ou la destruction des données.</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple :</strong></p>
+            <p>Utiliser des mots de passe forts, installer un antivirus, éviter de cliquer sur des liens suspects.</p>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Créez une liste de bonnes pratiques pour protéger vos données personnelles en ligne.</li>
+                <li>Installez un gestionnaire de mots de passe (si possible) et générez un mot de passe fort pour un site web.</li>
+            </ol>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2 id="chapitre2">Chapitre 2 : Algorithmes et organigrammes, introduction à la programmation Web</h2>
+
+        <h3 id="section2.1">2.1 Algorithmes et organigrammes</h3>
+
+        <div class="definition">
+            <p><strong>Définition d'un algorithme</strong> : Un algorithme est une suite d'instructions précises et ordonnées permettant de résoudre un problème ou d'effectuer une tâche.</p>
+            <p><strong>Représentation avec un organigramme</strong> : Un organigramme est un diagramme visuel qui représente un algorithme à l'aide de symboles standardisés (exemple : début/fin, décision, action).</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple d'algorithme :</strong></p>
+            <ol>
+                <li>Début</li>
+                <li>Demander à l'utilisateur d'entrer un nombre</li>
+                <li>Si le nombre est positif, afficher "Positif"</li>
+                <li>Sinon, afficher "Négatif"</li>
+                <li>Fin</li>
+            </ol>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Écrivez un algorithme pour déterminer si un nombre est pair ou impair.</li>
+                <li>Représentez cet algorithme sous forme d'organigramme.</li>
+            </ol>
+        </div>
+
+        <h3 id="section2.2">2.2 Introduction à la programmation Web</h3>
+
+        <h4>2.2.1 HTML : Structure générale d'un document HTML</h4>
+
+        <div class="definition">
+            <p><strong>Definition</strong> : HTML (HyperText Markup Language) est un langage de balisage utilisé pour créer des pages web. Il définit la structure et le contenu d'une page.</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Structure générale d'un document HTML :</strong></p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Titre de la page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bienvenue sur ma page&lt;/h1&gt;
+    &lt;p&gt;Ceci est un paragraphe.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Ouvrez un éditeur de texte (exemple : Notepad, Visual Studio Code).</li>
+                <li>Créez un fichier HTML avec la structure de base.</li>
+                <li>Ajoutez un titre, un en-tête et un paragraphe.</li>
+                <li>Ouvrez le fichier dans un navigateur pour voir le résultat.</li>
+            </ol>
+        </div>
+
+        <h4>2.2.2 HTML : Structure sémantique basique</h4>
+
+        <div class="definition">
+            <p><strong>Définition</strong> : La structure sémantique en HTML permet de donner du sens aux éléments d'une page web (exemple : <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>).</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple :</strong></p>
+            <pre><code>&lt;header&gt;
+    &lt;h1&gt;Mon Site Web&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;p&gt;Bienvenue sur mon site web.&lt;/p&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+    &lt;p&gt;Copyright @ 2023&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Modifiez votre fichier HTML pour inclure une structure sémantique (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>).</li>
+                <li>Ajoutez du contenu dans chaque section.</li>
+            </ol>
+        </div>
+
+        <h4>2.2.3 HTML : Tableau avec HTML</h4>
+
+        <div class="definition">
+            <p><strong>Définition</strong> : Les tableaux en HTML sont utilisés pour organiser des données en lignes et en colonnes.</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Exemple :</strong></p>
+            <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nom&lt;/th&gt;
+        &lt;th&gt;Âge&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Alice&lt;/td&gt;
+        &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Ajoutez un tableau à votre page HTML avec deux colonnes : "Nom" et "Âge".</li>
+                <li>Remplissez le tableau avec des données fictives.</li>
+            </ol>
+        </div>
+
+        <h4>2.2.4 CSS : Sélecteurs et propriétés de base</h4>
+
+        <div class="definition">
+            <p><strong>Définition</strong> : CSS (Cascading Style Sheets) est un langage utilisé pour styliser les pages web (couleurs, polices, mise en page).</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Sélecteurs :</strong></p>
+            <ul>
+                <li><strong>Éléments</strong> : Appliquer un style à tous les éléments d'un type (exemple : <code>h1 { color: blue; }</code>)</li>
+                <li><strong>ID</strong> : Appliquer un style à un élément unique (exemple : <code>#titre { font-size: 24px; }</code>)</li>
+                <li><strong>Classes</strong> : Appliquer un style à plusieurs éléments (exemple : <code>.important { font-weight: bold; }</code>)</li>
+            </ul>
+            <p><strong>Propriétés de base :</strong></p>
+            <ul>
+                <li><code>color</code> : Couleur du texte</li>
+                <li><code>font-size</code> : Taille de la police</li>
+                <li><code>margin</code> : Marge autour d'un élément</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Créez un fichier CSS et liez-le à votre fichier HTML.</li>
+                <li>Ajoutez des styles pour les en-têtes (<code>h1</code>), les paragraphes (<code>p</code>) et les tableaux.</li>
+            </ol>
+        </div>
+
+        <h4>2.2.5 Mini Projet d'application : Site web statique</h4>
+
+        <div class="exercise">
+            <p><strong>Projet :</strong></p>
+            <p>Pour mettre en pratique les compétences acquises, voici un projet simple :</p>
+            <ol>
+                <li>Créez un site web statique avec plusieurs pages (exemple : Accueil, À propos, Contact).</li>
+                <li>Utilisez HTML pour structurer le contenu et CSS pour le style.</li>
+                <li>Ajoutez des éléments sémantiques (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>).</li>
+                <li>Ajoutez un tableau pour afficher des informations (exemple : horaires d'ouverture).</li>
+                <li>Testez votre site dans un navigateur.</li>
+            </ol>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2 id="chapitre3">Chapitre 3 : Premier pas avec le langage PYTHON et introduction à l'intelligence artificielle (IA)</h2>
+
+        <h3 id="section3.1">3.1 Premier pas avec le langage PYTHON</h3>
+
+        <h4>3.1.1 Introduction à Python</h4>
+
+        <div class="definition">
+            <p><strong>Definition</strong> : Python est un langage de programmation interprété, facile à apprendre et à utiliser. Il est largement utilisé pour le développement web, l'analyse de données, l'automatisation, et bien plus encore.</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Caractéristiques :</strong></p>
+            <ul>
+                <li>Syntaxe simple et lisible</li>
+                <li>Langage polyvalent (web, scientifique, IA, etc.)</li>
+                <li>Grande communauté et nombreuses bibliothèques disponibles</li>
+            </ul>
+            <p><strong>Installation</strong> : Python peut être installé sur Windows, macOS et Linux. Il est également possible d'utiliser des environnements en ligne comme Replit ou Google Colab.</p>
+        </div>
+
+        <h4>3.1.2 Exemples de travaux pratiques</h4>
+
+        <div class="example">
+            <p><strong>Exemples de code Python :</strong></p>
+            <pre><code># Afficher un message
+print("Bonjour, monde !")
+
+# Utiliser des variables
+nom = "Alice"
+age = 16
+print("Je m'appelle", nom, "et j'ai", age, "ans.")
+
+# Boucle simple
+for i in range(5):
+    print("Itération numéro", i)
+
+# Condition simple
+nombre = 10
+if nombre > 0:
+    print("Le nombre est positif.")
+else:
+    print("Le nombre est négatif ou nul.")</code></pre>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Écrivez un programme Python qui demande à l'utilisateur son nom et son âge, puis affiche un message personnalisé.</li>
+                <li>Écrivez un programme qui affiche les nombres pairs de 1 à 20 en utilisant une boucle <code>for</code>.</li>
+            </ol>
+        </div>
+
+        <h3 id="section3.2">3.2 Introduction à l'intelligence artificielle (IA)</h3>
+
+        <h4>3.2.1 Définition de l'IA</h4>
+
+        <div class="definition">
+            <p><strong>Définition</strong> : L'intelligence artificielle (IA) est la capacité d'une machine à imiter l'intelligence humaine, en apprenant, en raisonnant et en s'adaptant à de nouvelles situations.</p>
+        </div>
+
+        <div class="example">
+            <p><strong>Applications courantes :</strong></p>
+            <ul>
+                <li>Reconnaissance faciale</li>
+                <li>Assistants virtuels (exemple : Siri, Alexa)</li>
+                <li>Voitures autonomes</li>
+                <li>Systèmes de recommandation (exemple : Netflix, YouTube)</li>
+            </ul>
+        </div>
+
+        <h4>3.2.2 Éthique pour l'éducation en lycée</h4>
+
+        <div class="definition">
+            <p><strong>Enjeux éthiques :</strong></p>
+            <ul>
+                <li><strong>Respect de la vie privée</strong> : Les systèmes d'IA collectent souvent des données personnelles</li>
+                <li><strong>Biais algorithmiques</strong> : Les IA peuvent reproduire ou amplifier les biais humains</li>
+                <li><strong>Impact sur l'emploi</strong> : L'automatisation peut remplacer certains emplois</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Discussion en classe :</strong></p>
+            <ol>
+                <li>Quels sont les avantages et les inconvénients de l'IA dans la vie quotidienne ?</li>
+                <li>Comment garantir que l'IA est utilisée de manière éthique et responsable ?</li>
+            </ol>
+        </div>
+
+        <h4>3.2.3 Exemples d'application de l'IA</h4>
+
+        <div class="example">
+            <p><strong>Reconnaissance d'images :</strong></p>
+            <p>Utilisation de l'IA pour identifier des objets dans des images (exemple : reconnaissance de visages, détection de maladies).</p>
+            
+            <p><strong>Traitement du langage naturel :</strong></p>
+            <p>Utilisation de l'IA pour comprendre et générer du langage humain (exemple : chatbots, traduction automatique).</p>
+        </div>
+
+        <div class="exercise">
+            <p><strong>Exercice pratique :</strong></p>
+            <ol>
+                <li>Recherchez un exemple d'application de l'IA dans un domaine qui vous intéresse (exemple : santé, éducation, divertissement).</li>
+                <li>Présentez cet exemple à la classe en expliquant comment l'IA est utilisée et quels sont ses impacts.</li>
+            </ol>
+        </div>
+
+        <h4>3.2.4 Projet pratique : Créer un programme Python simple</h4>
+
+        <div class="exercise">
+            <p><strong>Projet :</strong></p>
+            <p>Pour mettre en pratique les compétences acquises, voici un projet simple :</p>
+            <ol>
+                <li>Créez un programme Python qui demande à l'utilisateur de deviner un nombre entre 1 et 100.</li>
+                <li>Le programme doit indiquer si le nombre deviné est trop grand, trop petit, ou correct.</li>
+                <li>Ajoutez un compteur pour afficher le nombre de tentatives nécessaires pour trouver le bon nombre.</li>
+                <li>Testez votre programme et améliorez-le si nécessaire.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
