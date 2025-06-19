@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - HASINJO SALAMANARIVO David</title>
+    <style>
+        /* Reset et styles de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        /* En-tête */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        header h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 5px;
+        }
+        
+        header h2 {
+            color: #3498db;
+            font-weight: normal;
+            font-size: 1.3em;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        /* Coordonnées */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            flex-basis: 48%;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        /* Compétences */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .skill-category {
+            flex-basis: 48%;
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h4 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .skill-item {
+            margin-bottom: 8px;
+        }
+        
+        .skill-name {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+        }
+        
+        /* Formations et Expériences */
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .timeline-period {
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-location {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-description {
+            list-style-type: none;
+        }
+        
+        .timeline-description li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .timeline-description li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Centres d'intérêt */
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .interest-item {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+        
+        /* Pied de page */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-item, .skill-category {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HASINJO SALAMANARIVO David</h1>
+            <h2>Étudiant diplômé en Mathématiques Appliquées</h2>
+        </header>
+        
+        <section id="profil">
+            <h3>PROFIL</h3>
+            <p>Diplômé d'un Master à finalité recherche en Mathématiques Appliquées, je souhaite mettre à profit mes compétences en statistique et en informatique dans des projets concrets. Curieux, dynamique et passionné par l'apprentissage continu, je vise à optimiser ma performance dans les domaines scientifiques.</p>
+        </section>
+        
+        <section id="coordonnees">
+            <h3>COORDONNÉES</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Téléphone</strong>
+                    <span>(+261) 34 50 753 48</span>
+                </div>
+                <div class="contact-item">
+                    <strong>E-mail</strong>
+                    <span>davidhasinjo@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Adresse</strong>
+                    <span>Lot VS 64 Bis BM Ambolokandrina, ANTANANARIVO 101, Madagascar</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="competences">
+            <h3>COMPÉTENCES</h3>
+            <div class="skills">
+                <div class="skill-category">
+                    <h4>Informatique</h4>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Git | Github</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">R</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">PHP</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">MySQL</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">HTML/CSS</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">LaTeX</span>
+                        <span>85%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Systèmes d'exploitation</h4>
+                    <div class="skill-item">
+                        <span class="skill-name">Windows</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Linux | Ubuntu</span>
+                        <span>60%</span>
+                    </div>
+                    
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Langues</h4>
+                    <div class="skill-item">
+                        <span class="skill-name">Malagasy</span>
+                        <span>Langue maternelle</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Français</span>
+                        <span>Intermédiaire (B2)</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Anglais</span>
+                        <span>Débutant</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="formations">
+            <h3>FORMATIONS</h3>
+            <div class="timeline-item">
+                <div class="timeline-period">Master 2</div>
+                <div class="timeline-title">Mathématiques Appliquées</div>
+                <div class="timeline-location">Université d'Antananarivo, Madagascar</div>
+                <ul class="timeline-description">
+                    <li>Spécialité : Calcul Numérique</li>
+                    <li>Résultat : Bien</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-period">Master 1</div>
+                <div class="timeline-title">Mathématiques Appliquées</div>
+                <ul class="timeline-description">
+                    <li>Résultat : Bien</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-period">Licence 3</div>
+                <div class="timeline-title">Mathématiques et Informatique</div>
+                <ul class="timeline-description">
+                    <li>Mention : Assez Bien</li>
+                    <li>Parcours : Probabilité-Statistique, Algèbre Algorithmique et Calcul Numérique</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-period">Licence 2</div>
+                <div class="timeline-title">Mathématiques Communes</div>
+                <ul class="timeline-description">
+                    <li>Résultat : Assez Bien</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-period">Licence 1</div>
+                <div class="timeline-title">Mathématiques, Informatique et Physique-Chimie</div>
+                <ul class="timeline-description">
+                    <li>Résultat : Passable</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="experiences">
+            <h3>EXPÉRIENCES PROFESSIONNELLES</h3>
+            <div class="timeline-item">
+                <div class="timeline-period">2023–2025</div>
+                <div class="timeline-title">Formateur en Informatique et Mathématiques</div>
+                <div class="timeline-location">Centre Rassoul Akram, Lycée Privé la Sagesse Antaniavo</div>
+                <ul class="timeline-description">
+                    <li>Enseignement de la programmation (Python, JavaScript, HTML, CSS, Scratch) et du Pack Office</li>
+                    <li>Chargé de travaux dirigés en mathématiques</li>
+                    <li>Maintenance des ordinateurs</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-title">Membre du Groupe pour l'Enseignement des Mathématiques à Madagascar (GEMMA)</div>
+                <ul class="timeline-description">
+                    <li>Conception de sujets pour le Rallye Mathématiques de Madagascar</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-title">Direction des Examens Nationaux à Ankatso</div>
+                <ul class="timeline-description">
+                    <li>Saisie et vérification des notes du baccalauréat</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-title">Stage à la Direction Générale de l'Économie et du Plan</div>
+                <ul class="timeline-description">
+                    <li>Participation à une prépublication scientifique</li>
+                    <li>Modélisation économique</li>
+                    <li>Développement d'une application web pour la gestion de bases de données</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="interets">
+            <h3>CENTRES D'INTÉRÊT</h3>
+            <div class="interests">
+                <div class="interest-item">Football</div>
+                <div class="interest-item">Basket-ball</div>
+                <div class="interest-item">Design avec Photoshop</div>
+            </div>
+        </section>
+        
+        <footer>
+            Disponible pour des opportunités professionnelles dans les domaines des mathématiques appliquées, de l'informatique et de la statistique.
+        </footer>
+    </div>
+</body>
+</html>
